@@ -1,0 +1,143 @@
+.projectcontent {
+  span {
+    color:$primary-color;
+  }
+}
+
+.backtowork {
+  position: absolute;
+  right:0;
+  top:.25rem;
+  display: inline-block;
+  font-size: 1.25rem;
+  color:$black;
+  &:hover, &:focus {
+    color: $primary-color;
+  }
+  @include breakpoint('medium') {
+    right:-12.5%;
+  }
+  @include breakpoint('large') {
+    right:-50%;
+  }
+  @include breakpoint('xlarge') {
+    right:-25%;
+  }
+
+}
+.button.hollow {
+  border-left: transparent !important;
+  border-right: transparent !important;
+  border-top: transparent !important;
+  font-weight: 400;
+}
+.contactform {
+  .row {
+    margin-bottom: 1rem;
+  }
+
+  .button.hollow {
+    border-color: currentColor !important;
+    padding-bottom: .5em;
+
+    &:hover, &:focus {
+      color:$white;
+    }
+    &[type=reset] {
+      padding-left: 1px;
+      padding-right: 12.5%;
+    }
+    &[type=submit] {
+      padding-right: 1px;
+      padding-left: 12.5%;
+    }
+  }
+
+}
+[type=color],
+ [type=date],
+[type=datetime-local],
+[type=datetime],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea {
+  border-bottom: 1px solid currentColor;
+  font-weight: $global-weight-bold;
+  padding:.25em 0;
+  line-height: 1.4;
+  margin-bottom: .75rem;
+  &:focus {
+    border-bottom: 1px solid currentColor;
+  }
+
+  &.filled {
+    border-bottom: 1px solid currentColor;
+    box-shadow: 2px 3px 0 -2px #000,-2px 3px 0 -2px #000;
+  }
+}
+
+textarea {
+  background-color: $black;
+  color:$white;
+  border-bottom:none;
+  padding:3rem 15%;
+  &:focus {
+    background-color: $black;
+    border-bottom: none;
+  }
+}
+
+// input, textarea {
+//   &::-webkit-input-placeholder,
+//   &::-moz-placeholder,
+//   &:-ms-input-placeholder,
+//   &::placeholder {
+//     font-weight: 400;
+//   }
+// }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  transition:all .25s;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-weight: 400;
+  transition:all .25s;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-weight: 400;
+  transition:all .25s;
+}
+input::placeholder, textarea::placeholder {
+  font-weight: 400;
+  transition:all .25s;
+}
+
+textarea::-webkit-input-placeholder { color:$white; font-weight: $global-weight-bold; }
+textarea::-moz-placeholder { color:$white; font-weight: $global-weight-bold; }
+textarea:-ms-input-placeholder { color:$white; font-weight: $global-weight-bold; }
+textarea::placeholder { color:$white; font-weight: $global-weight-bold; }
+
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color:transparent;
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color:transparent;
+}
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color:transparent;
+}
+input:focus::placeholder, textarea:focus::placeholder {
+  color:transparent;
+}

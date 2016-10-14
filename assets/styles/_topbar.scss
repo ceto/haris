@@ -1,0 +1,135 @@
+.sticky-container {
+  // @include breakpoint(tablet) {
+ min-height: rem-calc(90);
+ //background-color: $black;
+  // }
+}
+
+.sticky {
+
+  @include breakpoint(tablet) {
+  }
+}
+.top-bar {
+  line-height: 1;
+  width:100%;
+  z-index:1;
+  &.darkened {
+    background-color: $black;
+  }
+}
+
+.top-bar-title {
+  @include breakpoint(tablet) {
+  }
+}
+.top-bar-right {
+  float:none;
+  @include breakpoint(tablet) {
+    float:right;
+  }
+}
+
+.responsive-menu {
+  clear:both;
+  display: none;
+  @include breakpoint(tablet) {
+    clear:none;
+    display: block;
+  }
+
+  .page-template-tmpl-landing & {
+    display: none !important;
+  }
+}
+.menu--main {
+  text-align: center;
+  font-weight: 400;
+  > li {
+    display: block;
+    float:left;
+    width: 50%;
+
+    @include breakpoint(tablet) {
+      display: table-cell;
+      float:none;
+      width:auto;
+    }
+
+    > a {
+      white-space: nowrap;
+      background-color: $black;
+      color:$white;
+      text-transform: uppercase;
+      font-size: .666rem;
+      // transition:all .4s ease .4s;
+      transition: all .2s;
+      min-width: rem-calc(95);
+      &.active {
+        color: $primary-color;
+        background-color: $white;
+        &:hover {
+          cursor: default;
+          background-color: $white;
+        }
+        .darkened & {
+          background-color: $black;
+          color:$white;
+        }
+      }
+      &:hover {
+        background-color: scale-color($black, $lightness: 14%);
+      }
+      // .top-bar.is-stuck & {
+      //   padding-top:1.5rem;
+      //   padding-bottom: 1.5rem;
+      // }
+    }
+  }
+}
+
+.top-bar .menu--main {
+  @include clearfix();
+  background-color: $black;
+
+}
+
+.homelogo {
+  //background-color: red;
+  height:90px;
+  font-size: 2rem;
+  line-height: 90px;
+  font-weight: $global-weight-bold;
+  color:$black;
+  //width:10rem;
+  // text-indent: 100%;
+  // white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  // background-image: url('../images/spire.svg');
+  // background-size: 100% auto;
+  // background-repeat: no-repeat;
+  // background-position: center 40%;
+
+  .darkened & {
+
+  }
+  @include breakpoint(tablet) {
+    margin-left:2vw;
+  }
+
+}
+
+.csiki {
+  position: absolute;
+  right:0;
+  top:0;
+  display: block;
+  width:90px;
+  height:90px;
+  background-color: $black;
+  padding:2.125rem 0 0 2.125rem;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}

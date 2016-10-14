@@ -1,0 +1,36 @@
+{
+  "name": "haris",
+  "homepage": "http:/hydrogene.hu/",
+  "authors": [
+    "Gabor Szabo <szabogabi@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "^6.2.2",
+    "motion-ui": "^1.2.2",
+    "owl.carousel": "owl-carousel2#^2.1.4",
+    "wow": "wow.js#^1.1.2",
+    "PACE": "pace#^1.0.2",
+    "magnific-popup": "^1.1.0"
+  },
+  "overrides": {
+    "motion-ui": {
+      "main": [
+        "motion-ui.scss",
+        "dist/motion-ui.js"
+      ]
+    },
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js",
+        "src/scss/owl.carousel.scss"
+      ]
+    },
+    "magnific-popup": {
+      "main": [
+        "dist/jquery.magnific-popup.js"
+      ]
+    }
+  }
+}
