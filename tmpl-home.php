@@ -9,10 +9,10 @@
     <div class="columns">
       <br><br><br>
       <h2 class="prettytitle wow fadeInRight" >
-      Haris Park - <br>A budai értelmiség új találkozóhelye
+      Haris Park - <br>A budai polgárság új találkozóhelye
       <small>Nyitás: 2017 nyarán</small>
       </h2>
-      <a href="#homelead" class="large button success wow fadeInLeft">Felfedezés indul</a>
+      <a href="#homelead" class="large button success wow fadeInLeft">Részletek</a>
     </div>
   </div>
 </section>
@@ -20,16 +20,16 @@
   <div class="row">
     <div class="columns">
       <h2 class="prettytitle wow fadeInRight" >
-      Polgári életvitel a XXI. században
-      <small>Rendezvényközpont és vendéglátás a Marczibányi téren</small>
+      Rendezvényközpont és étterem a Marczibányi téren
+      <small>Tisztelgés a késő reformkori budai polgárság találkozóhelyének</small>
       </h2>
     </div>
   </div>
   <div class="row wow fadeInLeft">
     <div class="columns medium-10 large-8 medium-push-2">
-      <p>2017-ben megnyílik a Haris Park beruházása Buda szívében a Marczibányi téren, melyben vendéglátó egységek és egy rendezvényközpont kapnak helyet. Egy igazi közösségi tér, amely történetéhez hűen a budai értelmiség találkozóhelye, környékbeliek kedvenc kerthelyisége, pompás bálok otthona.</p>
-      <p>Missziónk, hogy a magas színvonalú szolgáltatás mellett jó viszonyt ápoljunk a környéken lakókkal és környezetünkkel, a fenntarthatóságra kiemelt figyelmet fordítva (napelemek, közel 5000 nm zöldfelület). Eredeti funkciónak megfelelően helyreállítjuk a társasági életet, a régi kerthelyiséget, mely remélhetőleg hamarosan a budai polgárság törzshelyévé válik.</p>
-      <p>Célunk, hogy visszatérjen a polgári életvitel, tisztelve a konzervatív értékeket, de XXI. századi elvárásokat szolgáljunk ki.</p>
+      <p>2017-ben megnyílik a Haris Park Buda szívében a Marczibányi téren, melyben vendéglátó egységek és egy rendezvényközpont kapnak helyet. Egy igazi közösségi tér, amely történetéhez hűen a budai értelmiség és polgárság találkozóhelye, környékbeliek kedvelt kerthelyisége, elegáns bálok otthona.</p>
+      <p>Missziónk, hogy a magas színvonalú szolgáltatás mellett jó viszonyt ápoljunk a környéken lakókkal és környezetünkkel, a fenntarthatóságra és az elérhetőségre kiemelt figyelmet fordítva (napkollektorok a tetőn, közel 5000 m2 zöldfelület, társadalmi felelősség-vállaláshoz kötődő programok). Az eredeti funkciójának megfelelően helyreállítjuk a társasági életet szolgáló épületrészeket, a régi kerthelyiséget, mely remélhetőleg hamarosan a budaiak törzshelyévé válik.</p>
+      <p>Célunk, hogy visszatérjen a budai polgárok társasági élet irányi igénye, melyet XXI. századi  minőségben szolgálunk ki.</p>
       <a href="#" class="homeintromore"><i class="icon icon--plus"></i></a>
     </div>
   </div>
@@ -57,7 +57,7 @@
             <h4 class="card__title">
             Konferenciák és üzleti rendezvények
             </h4>
-            <div class="card__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maxime, eum, iste dolorem impedit veniam ipsam soluta dolor accusantium accusamus enim sit modi saepe aut magnam aliquid in ducimus velit.</p></div>
+            <div class="card__text"><p>Komplexumunk elkészültével alkalmas lesz csendes és hangulatos kerti  és többfunkciós beltéri rendezvények befogadására.  Tárgyalóink alkalmasak a kisebb létszámú megbeszélések, tréningek, workshopok megrendezésére. Termeink hatalmas ablakai megfelelően sötétíthetőek, klimatizáltak, hang és fénytechnikával felszereltek.</p></div>
           </div>
         </div>
         <div class="column">
@@ -68,7 +68,7 @@
             <h4 class="card__title">
             Pompás bálok és esküvők otthona
             </h4>
-            <div class="card__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maxime, eum, iste dolorem impedit veniam ipsam soluta dolor accusantium accusamus enim sit modi saepe aut magnam aliquid in ducimus velit.</p></div>
+            <div class="card__text"><p>Történelmi báltermünk 150 főnek biztosít kényelmes elrendezést bálokhoz, esküvőkhöz, gálavacsorákhoz. Nyári hónapokban hatalmas kertünkben is lehet ünnepelni, a természetben, mégis percekre a belvárostól. Kisebb, kápolnai hangulatot idéző oldalszárnyunk intimebb esküvők meghitt helyszíne.</p></div>
           </div>
         </div>
         <div class="column">
@@ -79,7 +79,7 @@
             <h4 class="card__title">
             Étterem és tetőtéri bár
             </h4>
-            <div class="card__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maxime, eum, iste dolorem impedit veniam ipsam soluta dolor accusantium accusamus enim sit modi saepe aut magnam aliquid in ducimus velit.</p></div>
+            <div class="card__text"><p>Adózva a hely szellemének, a már lassan 100 éve megnyílt Kastély vendéglő helyén lesz egy 80 fős, magas színvonalú étterem, ahol a házias magyar konyha remekeit élvezhetik vendégeink. Az emeleten privát különtermek, és nyáron egy szabadtéri tetőbár növeli a gasztronómiai élményszerzés lehetőségét.</p></div>
           </div>
         </div>
         <div class="column">
@@ -90,7 +90,7 @@
             <h4 class="card__title">
             Kerthelyiség az ősfás parkban
             </h4>
-            <div class="card__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maxime, eum, iste dolorem impedit veniam ipsam soluta dolor accusantium accusamus enim sit modi saepe aut magnam aliquid in ducimus velit.</p></div>
+            <div class="card__text"><p>Termetes gesztenyefák, japán csüngőakác, évszázados mogyorófák és sok más csodás fa öleli körbe a 120 fős kerthelyiségünket, melyet egy kültéri konyha szolgál ki könnyed, nyári különlegességekkel. Bízunk benne, hogy a környék lakói szívesen betérnek majd hozzánk egy kávéra, családi ebédre vagy romantikus vacsorára az árnyas parkba.</p></div>
           </div>
         </div>
       </div>
@@ -102,22 +102,22 @@
     <div class="columns medium-10 large-8">
       <h2 class="prettytitle wow fadeInRight" >
       Egyedi funkciók és adottságok
-      <small>akár 200 fős rendezvényekhez</small>
+      <small>akár 150 fős rendezvényekhez</small>
       </h2>
     </div>
   </div>
   <div class="row wow fadeInLeft">
     <div class="columns medium-10 large-8">
-      <p>A beruházásról, röviden (ezt még erős csiszolása szorul, nem tudom, mennyire legyen vázlatos Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magni, laborum, laudantium dolorum officiis accusantium, eos, velit voluptates dolor nulla cupiditate obcaecati odit aperiam impedit neque sed enim inventore magnam!</p>
+      <p>A Haris Park számos rendezvénytípusnak adhat otthont; üzleti (konferencia, megbeszélés, sajtótájékoztató, termékbemutató, tréning, csapatépítés, üzleti reggeli, részvényes taggyűlés), privát (esküvő, születésnap, bál, családi összejövetel, keresztelő, osztálytalálkozó), vagy kulturális (komolyzenei koncert, vásár, filmvetítés, könyvbemutató, művészeti kiállítás, színházi előadás, divatbemutató, aukciók) eseményeknek - az alábbi adottságokkal fogunk rendelkezni, mire teljesen elkészül a beruházás:</p>
       <ul>
         <li>320 nm-es bálterem 9 méteres belmagassággal</li>
         <li>70 nm-es kiállító tér/házasságkötő terem</li>
         <li>tárgyalótermek</li>
         <li>hatalmas ősfás park, mely kültéri rendezvényekre is alkalmas</li>
-        <li>80 fős étterem</li>
+        <li>80 fős étterem, 12 fős különteremmel</li>
         <li>120 fős kerthelyiség</li>
         <li>tetőtéri bár</li>
-        <li>különterem</li>
+        <li>bérelhető, privát BBQ terasz</li>
       </ul>
       <p>
         <a href="#" class="button success">Mutasd a látványterveket</a>
@@ -130,11 +130,11 @@
   <div class="row">
     <div class="columns medium-10 large-8 large-push-4">
       <h2 class="prettytitle wow fadeInRight" >
-      Júliustól várjuk önöket Buda „új-belvárosában”
+      Nyártól várjuk Önöket Buda „új-belvárosában”
       <small>a Lövőház utca végén</small>
       </h2>
       <div class="wow fadeInRight ">
-        <p>Könnyen megközelíthető helyszín. Széll Kálmán tértől 5 perc sétára. Jó tömegközlekedés, nyugodt, természetközeli környezet várja az idelátogatókat consectetur adipisicing elit. Iste magni, laborum, laudantium dolorum officiis accusantium, eos, velit voluptates dolor nulla cupiditate obcaecati.</p>
+        <p>Könnyen megközelíthető helyszín, a Széll Kálmán tértől 10 perc sétára. Autóval érkezőknek számos parkolási lehetőség a saját parkolónkban és a környéken. Nyugodt, természetközeli környezet várja az ide látogatókat, mégis karnyújtásnyira a belvárostól. A környéken sport, kulturális és bevásárlási lehetőségek széles választéka várja.</p>
       </div>
     </div>
     <div class="columns medium-10 large-4 large-pull-8">
@@ -142,17 +142,5 @@
     </div>
   </div>
 </section>
-<!-- <section id="approach" data-magellan-target="approach">
-  <?php //get_template_part('templates/home', 'designprocess'); ?>
-</section>
-<section id="people" class="ps" data-magellan-target="people">
-  <?php //get_template_part('templates/home', 'people'); ?>
-</section>
-<section id="clients" class="ps ps--dark" data-magellan-target="clients">
-  <?php //get_template_part('templates/home', 'clients'); ?>
-</section> -->
-<!-- <section id="contact" class="ps ps--accent" data-magellan-target="contact">
-  <?php //get_template_part('templates/home', 'contact'); ?>
-</section> -->
 <?php endwhile; ?>
 <?php get_template_part('templates/keyboard'); ?>

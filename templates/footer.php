@@ -1,15 +1,13 @@
 <div class="row ps ps--narrow">
-  <div class="columns medium-4">
+  <div class="columns medium-8">
     <h3>Kapcsolatfelvétel</h3>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quidem sapiente repellendus unde in ullam, dolorum animi maiores quas molestiae expedita est consequatur similique eius, aliquam voluptates reprehenderit possimus officia?
+    <p>Bármilyen kérdésük van, az alábbi e-mail címen várjuk jelentkezésüket: <a href="mailto:haris@haris.hu">haris@haris.hu</a></p>
   </div>
   <div class="columns medium-4">
-    <h3>Telefonszám</h3>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quidem sapiente repellendus unde in ullam, dolorum?
-  </div>
-  <div class="columns medium-4">
-    <h3>Hírlevélfeliratkozás</h3>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quidem sapiente repellendus unde in ullam, dolorum?
+    <h3>Impresszum</h3>
+    <p>Haris Park Kft.<br>
+    1122, Budapest<br>
+    Városmajor utca 48/b</p>
   </div>
 </div>
 <footer class="sitefooter ps ps--accent">
