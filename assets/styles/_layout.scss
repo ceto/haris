@@ -33,6 +33,9 @@ body {
   padding-bottom: 4rem;
   .page-template-tmpl-home &{
     min-height: calc(100vh - 4rem);
+    &.homehero {
+      min-height: calc(100vh - 11rem);
+    }
   }
 }
 .ps--narrow {
@@ -45,9 +48,16 @@ body {
 
 
 .ps--dark {
-  background-color: $dark-gray;
-
+  background-color: #000;
+  color:$white;
+  a {
+    color:$white;
+    &:hover, &:focus {
+      color:$light-gray;
+    }
+  }
 }
+
 .ps--accent {
   background-color: $primary-color;
   color:$white;

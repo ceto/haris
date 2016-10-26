@@ -16,6 +16,16 @@
     </div>
   </div>
 </section>
+<section class="homenews ps ps--narrow ps--dark">
+  <div class="row">
+    <div class="columns small-3 medium-2">
+      <strong>Beruházás hírei</strong>
+    </div>
+    <div class="columns small-9 medium-10">
+      <small><strong>2016. október 19.:</strong></small> <a href="#">Elkezdtődött a budai lövőház báltermének tetőtér rekonstrukciója</a><a href="<?php the_permalink(get_option( 'page_for_posts' )); ?>" style="float:right;"><small>Összes hír &hellip;</small></a>
+    </div>
+  </div>
+</section>
 <section id="homelead" class="ps homelead" data-magellan-target="homelead">
   <div class="row">
     <div class="columns">
