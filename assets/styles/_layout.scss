@@ -12,6 +12,8 @@ body {
 
 
 .document {
+  //margin-top: -90px;
+  //position: relative;
   //min-height: calc(100vh - 4rem);
   transition: opacity .4s linear;
   &.docfade {
@@ -19,6 +21,11 @@ body {
     .no-js &{
       opacity:1;
     }
+  }
+
+  //imagehed negativ
+  .page-template-tmpl-home & {
+    margin-top: -90px;
   }
 
 }
@@ -31,12 +38,6 @@ body {
   padding-top: 5rem;
   padding-top: 10vh;
   padding-bottom: 4rem;
-  .page-template-tmpl-home &{
-    min-height: calc(100vh - 4rem);
-    &.homehero {
-      min-height: calc(100vh - 11rem);
-    }
-  }
 }
 .ps--narrow {
   padding-top: 2rem;
@@ -44,6 +45,9 @@ body {
   .page-template-tmpl-home &{
     min-height:4rem;
   }
+}
+.ps--full{
+  min-height: calc(100vh - 4rem);
 }
 
 
@@ -68,6 +72,7 @@ body {
     }
   }
 }
+
 
 .overexp {
   margin-left: -.625rem;

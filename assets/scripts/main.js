@@ -14,43 +14,14 @@
 
 $(document).foundation();
 
-
-
-
 $.each($('.card, .membersquare, .projectsquare, .clientlogo'), function(i, el){
   $(el).addClass('fadeInUp wow').attr('data-wow-delay', i%5*125 + 'ms');
 });
 
-function resizeProjectCarousel() {
-  if (window.innerWidth>=768 && $('.projectheadrow').innerHeight()<420 ) {
-    $('.projectcarousel img').css('max-height', function() {
-      return (window.innerHeight>720)?(window.innerHeight - $('.projectheadrow').outerHeight()  - 90 ):400 ;
-    });
-    $('.projectcarousel .owl-stage-outer').css('max-height', function() {
-      return (window.innerHeight>720)?(window.innerHeight - $('.projectheadrow').outerHeight()  - 90 ):400 ;
-    });
-  } else {
-    $('.projectcarousel img').css('max-height', function() {
-      return 'none';
-    });
-    $('.projectcarousel .owl-stage-outer').css('max-height', function() {
-      return 'none' ;
-    });
-  }
-}
+
 
 $('document').ready(function() {
 
-  //tweaking main navigation #-ed elemets on non home pages
-  if ( !$('body').hasClass('page-template-tmpl-home') ) {
-    $('.menu-the-work a' ).addClass('active');
-    $('.menu-item').each(function() {
-      if ( $(this).find('a').attr('href').substring(0, 1) === '#') {
-       $(this).find('a').attr('href', $('.homelogo').data('realhome') + $(this).find('a').attr('href') );
-      }
-    });
-    //$('.primarynav').foundation('reflow');
-  }
 
   $('input[type=text], input[type=email]').on('change', function(){
       if ( $(this).val() !== '' ) {
@@ -65,9 +36,6 @@ $('document').ready(function() {
     if ( ($(this).attr('href').substr(0,1)!=='#') && ($(this).attr('href').substr(0,6)!=='mailto') && (!$(this).hasClass('popimg'))
         ) {
       e.preventDefault();
-      // $('.thecover').removeClass('rejtve');
-      // $('.thecover').removeClass('opening');
-      $('.top-bar').addClass('darkened');
       $('.document').addClass('docfade');
       window.location.href = $(this).attr('href');
     }
@@ -76,174 +44,21 @@ $('document').ready(function() {
 
   $('.document').removeClass('docfade');
 
+  $('.top-bar button').on('click', function(event) {
+    //event.preventDefault();
+    /* Act on the event */
 
-  resizeProjectCarousel();
-
-
-  //Home intra accordion control
-
-  $('.homeintromore, .whatwedoclose').on('click', function(e) {
-    e.preventDefault();
-    $('#intro').foundation('toggle', $('#introblock'));
-    $('#intro').foundation('toggle', $('#whatwedo'));
-    //$('.keyboard').toggleClass('is-hidden');
-  });
-
-
-
-  //popimg Gallery popup
-
-  $('.wstarter').click(function(e) {
-    e.preventDefault();
-    var items = [];
-    $( $(this).attr('href') ).find('.popimg').each(function() {
-      items.push( this );
-    });
-
-    $.magnificPopup.open({
-      items: items,
-      type: 'image',
-      tLoading: 'Loading image #%curr%...',
-      mainClass: 'mfp-img-mobile nottootall mfp-with-zoom',
-      closeBtnInside: false,
-      gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [1,1] // Will preload 0 - before current, and 1 after the current image
-      },
-      image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-        titleSrc: function(item) {
-          return item.el.attr('title');
-        }
-      }
-    });
-  });
-
-
-  //project Gallery popup
-  $('.projectcarousel').magnificPopup({
-    delegate: 'a.popimg',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile nottootall mfp-with-zoom',
-    closeBtnInside: false,
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [1,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
-        return item.el.attr('title');
-      }
+    if( !$('.top-bar').hasClass('is-stuck') ) {
+      $('.top-bar').addClass('is-stuck');
+      $('.sticky-container').height(0);
+    }
+    if( $('.top-bar').hasClass('is-at-top') ) {
+      $('.sticky-container').height(0);
     }
   });
 
-
-
-
 });
 
-
-
-
-
-$( window ).on('resize', function() {
-  resizeProjectCarousel();
-});
-
-
-$('.menu-item a').on('click', function(){
-  if (window.innerWidth<768) {
-    $('.menu-icon').click();
-  }
-});
-
-$('.top-bar-right').on('update.zf.magellan', function() {
-  var section = $( $('.primarynav a.active').attr('href') );
-  var prevsection = section.prev('main > section').attr('id');
-  var nextsection = section.next('main > section').attr('id');
-  prevsection = !prevsection?'work':prevsection;
-  setTimeout(function() {
-    $('.realkeyboard .btn.up').attr('href','#' + prevsection);
-    $('.realkeyboard .btn.down').attr('href','#' + nextsection);
-    $('.keyboard').removeClass('active');
-    if (section.attr('id')==='approach') {
-      $('.keyboard').addClass('active');
-      $('a[data-owltarget]').attr('data-owltarget','approach');
-    }
-    if (section.attr('id')==='people') {
-      $('.keyboard').addClass('active');
-      $('a[data-owltarget]').attr('data-owltarget','members');
-    }
-  },500);
-});
-
-$(document.documentElement).keydown(function(event) {
-    switch (event.keyCode) {
-      case 38:
-        $('.realkeyboard .btn.up').addClass('pressed');
-      break;
-      case 40:
-        $('.realkeyboard .btn.down').addClass('pressed');
-      break;
-      case 37:
-        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
-          $('.realkeyboard .btn.left').addClass('pressed');
-        }
-        if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
-          $('.realkeyboard .btn.left').addClass('pressed');
-        }
-        $('.keyboard .button.left').addClass('pressed');
-      break;
-      case 39:
-        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
-          $('.realkeyboard .btn.right').addClass('pressed');
-        }
-        if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
-          $('.realkeyboard .btn.right').addClass('pressed');
-        }
-        $('.keyboard .button.right').addClass('pressed');
-      break;
-
-    }
-});
-
-$(document.documentElement).keyup(function(event) {
-    $('.realkeyboard .btn').removeClass('pressed');
-    $('.keyboard .button').removeClass('pressed');
-    switch (event.keyCode) {
-      case 38:
-      if ( $('body').hasClass('page-template-tmpl-home') ) {
-        $('.primarynav').foundation('scrollToLoc', $('.realkeyboard .btn.up').attr('href'));
-      }
-      break;
-      case 40:
-      if ( $('body').hasClass('page-template-tmpl-home') ) {
-        $('.primarynav').foundation('scrollToLoc', $('.realkeyboard .btn.down').attr('href'));
-      }
-      break;
-      case 37:
-        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
-          $('.realkeyboard .btn.left').click();
-        }
-        if ($('body').hasClass('single-project')) {
-          $('.realkeyboard .btn.left').click();
-        }
-      break;
-      case 39:
-        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
-          $('.realkeyboard .btn.right').click();
-        }
-        if ($('body').hasClass('single-project')) {
-          $('.realkeyboard .btn.right').click();
-        }
-      break;
-
-    }
-});
 
 
 
@@ -256,207 +71,4 @@ $(function() {
     offset: 120,
   }).init();
 });
-
-
-var popgalcarousel = $('.popgalcarousel').owlCarousel({
-    smartSpeed:500,
-    margin:0,
-    autoHeight:true,
-    loop:true,
-    autoplay: false,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    // mouseDrag:false,
-    // touchDrag:false,
-    // pullDrag:false,
-    items:1,
-    nav:true,
-    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    itemElement: 'div'
-});
-
-
-
-var memberscarousel = $('.memberscarousel').owlCarousel({
-    //margin:32,
-    smartSpeed:500,
-    //autoWidth:true,
-    // mouseDrag:false,
-    // touchDrag:false,
-    // pullDrag:false,
-    autoHeight:true,
-    loop:false,
-    items:1,
-    nav:false,
-    slideBy:3,
-    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:2,
-            margin:24
-        },
-        540:{
-            items:3,
-            margin:24
-        },
-        768:{
-            items:3,
-            margin:32
-        },
-        1024:{
-            items:4,
-            margin:32
-        },
-        1200:{
-            items:4,
-            margin:32
-        },
-        1440:{
-            items:4,
-            margin:32
-        }
-    }
-});
-
-
-
-var approachcarousel = $('.approachcarousel').owlCarousel({
-    //margin:32,
-    smartSpeed:500,
-    //autoWidth:true,
-    // mouseDrag:false,
-    // touchDrag:false,
-    // pullDrag:false,
-    autoHeight:true,
-    loop:true,
-    items:1,
-    nav:false,
-    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            margin:24
-        },
-        768:{
-            items:1,
-            margin:24
-        },
-        1024:{
-            items:1,
-            margin:32
-        }
-    }
-
-});
-
-
-var aboutcarousel = $('.aboutcarousel').owlCarousel({
-    smartSpeed:500,
-    margin:30,
-    autoHeight:true,
-    loop:true,
-    mouseDrag:false,
-    touchDrag:false,
-    pullDrag:false,
-    items:1,
-    nav:false,
-    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    itemElement: 'section'
-});
-
-
-var projectcarousel = $('.projectcarousel').owlCarousel({
-    //margin:32,
-    smartSpeed:500,
-    loop:true,
-    autoWidth:true,
-    autoHeight:true,
-    items:1,
-    nav:false,
-    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            margin:0
-        },
-        768:{
-            items:2,
-            margin:24
-        },
-        1200:{
-            items:3,
-            margin:32
-        }
-    }
-});
-
-
-
-$('.btn.up, .btn.down').on('click', function(e){
-  e.preventDefault();
-  $('.primarynav').foundation('scrollToLoc', $(this).attr('href'));
-});
-
-$('.button.left').on('click', function(e){
-  e.preventDefault();
-  $('.btn.left').click();
-});
-
-$('.button.right').on('click', function(e){
-  e.preventDefault();
-  $('.btn.right').click();
-});
-
-$('.btn.left').on('click', function(e){
-  e.preventDefault();
-  var owltarget = $(this).attr('data-owltarget');
-  switch (owltarget) {
-    case 'approach':
-     approachcarousel.trigger('prev.owl.carousel');
-    break;
-    case 'members':
-     memberscarousel.trigger('prev.owl.carousel');
-    break;
-    case 'project':
-      projectcarousel.trigger('prev.owl.carousel');
-    break;
-  }
-});
-
-$('.btn.right').click(function(e){
-  e.preventDefault();
-  var owltarget = $(this).attr('data-owltarget');
-  switch (owltarget) {
-    case 'approach':
-      approachcarousel.trigger('next.owl.carousel');
-    break;
-    case 'members':
-      memberscarousel.trigger('next.owl.carousel');
-    break;
-    case 'project':
-      projectcarousel.trigger('next.owl.carousel');
-    break;
-  }
-});
-
-
-
-
-
-Pace.on('done', function() {
-  $('.top-bar').removeClass('darkened');
-  projectcarousel.trigger('refresh.owl.carousel');
-  memberscarousel.trigger('refresh.owl.carousel');
-  approachcarousel.trigger('refresh.owl.carousel');
-});
-
-
-
-
-
-
-
 

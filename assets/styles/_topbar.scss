@@ -1,136 +1,144 @@
-.sticky-container {
-  // @include breakpoint(tablet) {
- min-height: rem-calc(90);
- //background-color: $black;
-  // }
+body > .sticky-container {
+    min-height: rem-calc(90);
 }
 
-.sticky {
-
-  @include breakpoint(tablet) {
-  }
-}
 .top-bar {
-  line-height: 1;
-  width:100%;
-  z-index:1;
-  &.darkened {
-    background-color: $black;
-  }
+    width: 100%;
+    &.is-open {
+        @media screen and (max-width: map-get($breakpoints, tablet) ) {
+            // border-bottom: 1px solid rgba($light-gray,.5);
+            // background-color: rgba(#fff, .9);
+            // position: fixed;
+            // z-index: 5;
+        }
+    }
+    &.is-stuck {
+        border-bottom: 1px solid rgba($light-gray,.5);
+        background-color: rgba(#fff,.9);
+    }
 }
 
 .top-bar-title {
-  @include breakpoint(tablet) {
-  }
+    @include breakpoint(tablet) {
+    }
 }
 .top-bar-right {
-  float:none;
-  @include breakpoint(tablet) {
-    float:right;
-  }
+    @include breakpoint(tablet) {
+        float: right;
+    }
+
+    float: none;
 }
 
 .responsive-menu {
-  clear:both;
-  display: none;
-  @include breakpoint(tablet) {
-    clear:none;
-    display: block;
-  }
+    @include breakpoint(tablet) {
+        display: block;
+        clear: none;
+    }
 
-  .page-template-tmpl-landing & {
-    display: none !important;
-  }
+    display: none;
+    clear: both;
+    .page-template-tmpl-landing & {
+        display: none !important;
+    }
 }
 .menu--main {
-  text-align: center;
-  font-weight: 400;
-  > li {
-    display: block;
-    float:left;
-    width: 50%;
+    font-weight: 400;
 
-    @include breakpoint(tablet) {
-      display: table-cell;
-      float:none;
-      width:auto;
-    }
+    text-align: center;
+    > li {
+        @include breakpoint(tablet) {
+            display: table-cell;
+            float: none;
 
-    > a {
-      font-family: $header-font-family;
-      white-space: nowrap;
-      background-color: $black;
-      color:$white;
-      text-transform: uppercase;
-      font-size: .666rem;
-      // transition:all .4s ease .4s;
-      transition: all .2s;
-      min-width: rem-calc(95);
-      &.active {
-        color: $primary-color;
-        background-color: $white;
-        &:hover {
-          cursor: default;
-          background-color: $white;
+            width: auto;
         }
-        .darkened & {
-          background-color: $black;
-          color:$white;
+
+        display: block;
+        float: left;
+
+        width: 50%;
+        > a {
+            font-family: $header-font-family;
+            font-size: .666rem;
+
+            min-width: rem-calc(95);
+            // transition:all .4s ease .4s;
+
+            transition: all .2s;
+            white-space: nowrap;
+            //background-color: $black;
+            color:red;
+            text-transform: uppercase;
+            &.active {
+                color: $primary-color;
+                //background-color: $white;
+                &:hover {
+                    cursor: default;
+                    //background-color: $white;
+                }
+            }
+            &:hover {
+                //background-color: scale-color($black, $lightness: 14%);
+            }
+            .top-bar.is-stuck & {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
         }
-      }
-      &:hover {
-        background-color: scale-color($black, $lightness: 14%);
-      }
-      // .top-bar.is-stuck & {
-      //   padding-top:1.5rem;
-      //   padding-bottom: 1.5rem;
-      // }
     }
-  }
 }
 
 .top-bar .menu--main {
-  @include clearfix();
-  background-color: $black;
-
+    @include clearfix();
 }
 
 .homelogo {
-  //background-color: red;
-  height:90px;
-  font-size: 2rem;
-  line-height: 90px;
-  font-weight: $global-weight-bold;
-  color:$black;
-  //width:10rem;
-  // text-indent: 100%;
-  // white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  // background-image: url('../images/spire.svg');
-  // background-size: 100% auto;
-  // background-repeat: no-repeat;
-  // background-position: center 40%;
 
-  .darkened & {
+    font-size: 1.75rem;
+    font-weight: $global-weight-bold;
+    line-height: 90px;
 
-  }
-  @include breakpoint(tablet) {
-    margin-left:2vw;
-  }
+    display: block;
+    //width:10rem;
+    // text-indent: 100%;
+    // white-space: nowrap;
+    overflow: hidden;
+    //background-color: red;
 
+    height: 90px;
+
+    color: $black;
+    // background-image: url('../images/spire.svg');
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
+    // background-position: center 40%;
+    .top-bar.is-stuck & {
+        font-size: 1.5rem;
+        line-height: 60px;
+
+        height: 60px;
+    }
 }
 
 .csiki {
-  position: absolute;
-  right:0;
-  top:0;
-  display: block;
-  width:90px;
-  height:90px;
-  background-color: $black;
-  padding:2.125rem 0 0 2.125rem;
-  @include breakpoint(tablet) {
-    display: none;
-  }
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 90px;
+    height: 90px;
+    padding: 2.125rem 0 0 3.25rem;
+
+    .top-bar.is-stuck & {
+      padding: 1.125rem 0 0 3.25rem;
+      //width: 60px;
+      height: 60px;
+    }
 }

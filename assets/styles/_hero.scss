@@ -1,0 +1,5 @@
+.hero--home {
+  @include breakpoint(tablet) {
+    min-height: calc(100vh - 5rem);
+  }
+}

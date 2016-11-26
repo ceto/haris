@@ -393,8 +393,8 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 2.5rem .875rem;
-$menu-item-color-active: $primary-color;
-$menu-item-background-active: $white;
+$menu-item-color-active: green;
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter
@@ -552,7 +552,7 @@ $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: $black;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
@@ -573,7 +573,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: $white;
+$topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;

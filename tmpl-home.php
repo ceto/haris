@@ -4,10 +4,10 @@
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-<section id="homehero" class="ps ps--accent homehero" data-magellan-target="homehero">
+<section class="ps ps--accent hero hero--home">
   <div class="row">
     <div class="columns">
-      <br><br><br>
+      <br><br><br><br><br><br>
       <h2 class="prettytitle wow fadeInRight" >
       Haris Park - <br>A budai polgárság új találkozóhelye
       <small>Nyitás: 2017 nyarán</small>
@@ -26,7 +26,7 @@
     </div>
   </div>
 </section>
-<section id="homelead" class="ps homelead" data-magellan-target="homelead">
+<section class="ps homelead">
   <div class="row">
     <div class="columns">
       <h2 class="prettytitle wow fadeInRight" >
