@@ -52,20 +52,19 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  //primary: #ff671f,
-  primary: #8e9091,
-  secondary: #6c6c6c,
+  primary: #d08900,
+  secondary: #490044,
   success: #000000,
-  warning: #6c6c6c,
-  alert: scale-color(#ff671f, $lightness: 14%)
+  warning: #fee56e,
+  alert: #ffc217
 );
 $light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8e9091;
+$medium-gray: #414042;
+$dark-gray: #333333;
 $black: #000000;
 $white: #ffffff;
 $body-background: $white;
-$body-font-color: map-get($foundation-palette, secondary);
+$body-font-color: #414042;
 $body-font-family: $serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -154,7 +153,7 @@ $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color-hover: map-get($foundation-palette, alert);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -393,7 +392,7 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 2.5rem .875rem;
-$menu-item-color-active: green;
+$menu-item-color-active: map-get($foundation-palette, alert);
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 

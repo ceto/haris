@@ -52,23 +52,21 @@ body {
 
 
 .ps--dark {
-  background-color: #000;
+  background-color: $dark-gray;
   color:$white;
   a {
-    color:$white;
+    color: map-get($foundation-palette, alert);
     &:hover, &:focus {
-      color:$light-gray;
+      color: map-get($foundation-palette, primary);
     }
   }
 }
 
 .ps--accent {
-  background-color: $primary-color;
-  color:$white;
+  background-color: map-get($foundation-palette, warning);
+  color:$dark-gray;
   a {
-    color:$white;
     &:hover, &:focus {
-      color:$black;
     }
   }
 }
@@ -118,3 +116,9 @@ body {
   padding-left: 16rem;
 }
 
+
+article.sticky {
+  position: static;
+  z-index: auto;
+  transform: none;
+}
