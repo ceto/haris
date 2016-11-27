@@ -42,6 +42,7 @@ body > .sticky-container {
         display: none !important;
     }
 }
+
 .menu--main {
     font-weight: 400;
 
@@ -59,7 +60,7 @@ body > .sticky-container {
 
         width: 50%;
         > a {
-            font-family: $header-font-family;
+            //font-family: $header-font-family;
             font-size: .666rem;
 
             min-width: rem-calc(95);
@@ -69,7 +70,7 @@ body > .sticky-container {
             white-space: nowrap;
             //background-color: $black;
             //color:red;
-            text-transform: uppercase;
+            //text-transform: uppercase;
             &.active {
                 //color: $primary-color;
                 //background-color: $white;

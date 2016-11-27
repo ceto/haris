@@ -47,7 +47,7 @@
 <!-- <section id="work" class="works" data-magellan-target="work">
   <?php //get_template_part('templates/home', 'works'); ?>
 </section> -->
-<section id="about" class="ps ps--accent" data-magellan-target="about">
+<section id="about" class="ps ps--dark">
   <div class="row">
     <div class="columns">
       <h2 class="prettytitle wow fadeInRight">
@@ -116,9 +116,11 @@
       </h2>
     </div>
   </div>
-  <div class="row wow fadeInLeft">
-    <div class="columns medium-10 large-8">
+  <div class="row wow fadeInUp">
+    <div class="columns large-6">
       <p>A Haris Park számos rendezvénytípusnak adhat otthont; üzleti (konferencia, megbeszélés, sajtótájékoztató, termékbemutató, tréning, csapatépítés, üzleti reggeli, részvényes taggyűlés), privát (esküvő, születésnap, bál, családi összejövetel, keresztelő, osztálytalálkozó), vagy kulturális (komolyzenei koncert, vásár, filmvetítés, könyvbemutató, művészeti kiállítás, színházi előadás, divatbemutató, aukciók) eseményeknek - az alábbi adottságokkal fogunk rendelkezni, mire teljesen elkészül a beruházás:</p>
+    </div>
+    <div class="columns large-6">
       <ul>
         <li>320 nm-es bálterem 9 méteres belmagassággal</li>
         <li>70 nm-es kiállító tér/házasságkötő terem</li>
@@ -129,9 +131,13 @@
         <li>tetőtéri bár</li>
         <li>bérelhető, privát BBQ terasz</li>
       </ul>
+    </div>
+  </div>
+  <div class="row wow fadeInUp">
+    <div class="columns large-6">
       <p>
-        <a href="#" class="button success">Mutasd a látványterveket</a>
-        <a href="<?php the_permalink(18); ?>" class="button warning">Rekonstrukció részletei</a>
+        <a href="#" class="button">Mutasd a látványterveket</a>
+        <a href="<?php the_permalink(18); ?>" class="button success">Rekonstrukció részletei</a>
       </p>
     </div>
   </div>
