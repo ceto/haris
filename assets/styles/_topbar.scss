@@ -60,27 +60,23 @@ body > .sticky-container {
 
         width: 50%;
         > a {
-            //font-family: $header-font-family;
+
             font-size: .666rem;
 
             min-width: rem-calc(95);
-            // transition:all .4s ease .4s;
+
 
             transition: all .2s;
             white-space: nowrap;
-            //background-color: $black;
-            //color:red;
-            //text-transform: uppercase;
+
             &.active {
-                //color: $primary-color;
-                //background-color: $white;
                 &:hover {
                     cursor: default;
-                    //background-color: $white;
+
                 }
             }
             &:hover {
-                //background-color: scale-color($black, $lightness: 14%);
+
             }
             .top-bar.is-stuck & {
                 padding-top: 1.5rem;

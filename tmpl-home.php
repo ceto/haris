@@ -44,9 +44,6 @@
     </div>
   </div>
 </section>
-<!-- <section id="work" class="works" data-magellan-target="work">
-  <?php //get_template_part('templates/home', 'works'); ?>
-</section> -->
 <section id="about" class="ps ps--dark">
   <div class="row">
     <div class="columns">
@@ -159,4 +156,3 @@
   </div>
 </section>
 <?php endwhile; ?>
-<?php get_template_part('templates/keyboard'); ?>

@@ -1,6 +1,6 @@
 <div data-sticky-container>
   <header class="top-bar" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="90">
-    <div class="row expanded">
+    <div class="row">
       <div class="columns">
         <div class="top-bar-title">
           <a class="homelogo" href="<?= esc_url(home_url('/')); ?>" data-realhome="<?php the_permalink(45); ?>">
