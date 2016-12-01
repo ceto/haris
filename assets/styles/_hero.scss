@@ -1,5 +1,53 @@
-.hero--home {
+.hero {
+  background-color: $light-gray;
+  position: relative;
+  color:#fff;
+  height: 32rem;
   @include breakpoint(tablet) {
-    min-height: calc(100vh - 5rem);
+    height: 60vh;
+    min-height:34rem;
+    max-height:40rem;
+  }
+  .button {
+    margin-top: 1.5em;
+    margin-bottom: 0;
   }
 }
+.hero__content {
+  position: absolute;
+  left:0;
+  bottom:45%;
+  width:100%;
+  transform: translateY(50%);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+
+.hero__maintext {
+  color:inherit;
+  text-transform: uppercase;
+  font-weight: $global-weight-bold;
+  font-size: 1.5rem;
+  @include breakpoint(medium) {
+    font-size: 2rem;
+  }
+  @include breakpoint(large) {
+    font-size: 2.5rem;
+  }
+
+}
+
+.hero__subtext {
+  font-weight: $global-weight-bold;
+  color:inherit;
+}
+
+.hero__discl {
+  font-family: $sans-serif;
+  font-weight: $global-weight-normal;
+  color:inherit;
+  //font-size: 1.5rem;
+}
+

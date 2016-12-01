@@ -4,39 +4,36 @@
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-<section class="ps ps--accent hero hero--home">
-  <div class="row">
-    <div class="columns">
-      <br><br><br><br><br><br>
-      <h2 class="prettytitle wow fadeInRight" >
-      Haris Park - <br>A budai polgárság új találkozóhelye
-      <small>Nyitás: 2017 nyarán</small>
-      </h2>
-      <a href="#homelead" class="large button success wow fadeInLeft">Részletek</a>
+<section class="hero hero--home">
+  <div class="hero__content">
+    <div class="row">
+      <div class="columns">
+        <h2 class="hero__subtext">Haris Park</h2>
+        <h2 class="hero__maintext">A budai polgárság új találkozóhelye</h2>
+        <h3 class="hero__discl">Nyitás: 2017 nyarán</h3>
+        <a href="#homelead" class="button wow fadeInLeft">Részletek</a>
+      </div>
     </div>
   </div>
 </section>
 <section class="homenews ps ps--narrow ps--dark">
   <div class="row">
-    <div class="columns small-3 medium-2">
-      <strong>Beruházás hírei</strong>
-    </div>
-    <div class="columns small-9 medium-10">
-      <small><strong>2016. október 19.:</strong></small> <a href="#">Elkezdtődött a budai lövőház báltermének tetőtér rekonstrukciója</a><a href="<?php the_permalink(get_option( 'page_for_posts' )); ?>" style="float:right;"><small>Összes hír &hellip;</small></a>
+    <div class="columns">
+      <strong>2016. október 19.:</strong> <a href="#">Elkezdtődött a budai lövőház báltermének tetőtér rekonstrukciója</a><a href="<?php the_permalink(get_option( 'page_for_posts' )); ?>" style="float:right;"><small>Összes hír &hellip;</small></a>
     </div>
   </div>
 </section>
 <section class="ps homelead">
   <div class="row">
     <div class="columns">
-      <h2 class="prettytitle wow fadeInRight" >
+      <h2 class="prettytitle prettytitle--centered wow fadeInUp" >
       Rendezvényközpont és étterem a Marczibányi téren
       <small>Tisztelgés a késő reformkori budai polgárság találkozóhelyének</small>
       </h2>
     </div>
   </div>
-  <div class="row wow fadeInLeft">
-    <div class="columns medium-10 large-8 medium-push-2">
+  <div class="row wow fadeInUp">
+    <div class="columns medium-9 large-8 medium-centered">
       <p>2017-ben megnyílik a Haris Park Buda szívében a Marczibányi téren, melyben vendéglátó egységek és egy rendezvényközpont kapnak helyet. Egy igazi közösségi tér, amely történetéhez hűen a budai értelmiség és polgárság találkozóhelye, környékbeliek kedvelt kerthelyisége, elegáns bálok otthona.</p>
       <p>Missziónk, hogy a magas színvonalú szolgáltatás mellett jó viszonyt ápoljunk a környéken lakókkal és környezetünkkel, a fenntarthatóságra és az elérhetőségre kiemelt figyelmet fordítva (napkollektorok a tetőn, közel 5000 m2 zöldfelület, társadalmi felelősség-vállaláshoz kötődő programok). Az eredeti funkciójának megfelelően helyreállítjuk a társasági életet szolgáló épületrészeket, a régi kerthelyiséget, mely remélhetőleg hamarosan a budaiak törzshelyévé válik.</p>
       <p>Célunk, hogy visszatérjen a budai polgárok társasági élet irányi igénye, melyet XXI. századi  minőségben szolgálunk ki.</p>

@@ -1,7 +1,7 @@
 <?php use Roots\Sage\Titles; ?>
-<div class="row ps ps--narrow">
+<div class="pagehead row">
   <div class="columns">
-      <h1 class="prettytitle"><?= Titles\title(); ?></h1>
+      <h1 class="pagehead__title"><?= Titles\title(); ?></h1>
   </div>
 </div>
 

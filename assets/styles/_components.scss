@@ -1,20 +1,42 @@
-.pageheader__title {
-  //color:$primary-color;
-  margin-bottom: 0;
+.pagehead {
+  // background-color: $body-font-color;
+  // color:$body-background;
+  // padding-top:2rem;
+  // padding-bottom: 2rem;
+}
+.pagehead__title {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin:0;
+  color:inherit;
 }
 .prettytitle {
   position: relative;
   color: inherit;
-  font-weight: $global-weight-bold;
-  margin:0 0 4rem;
+  //font-weight: $global-weight-bold;
+  margin:0 0 1em;
   line-height: 1.1;
+  font-size: 1.25rem;
+  @include breakpoint(tablet) {
+      font-size: 1.666rem;
+  }
+  @include breakpoint(large) {
+      font-size: 2rem;
+  }
+  @include breakpoint(xlarge) {
+      font-size: 2.25rem;
+  }
+  @include breakpoint(xxlarge) {
+      font-size: 2.5rem;
+  }
   small {
+    margin-top: .125em;
     font-family: $sans-serif;
     display: block;
     font-weight: $global-weight-normal;
     font-size: 75%;
     color:inherit;
-    line-height: inherit;
+    line-height: 1.2;
     animation-delay: .5s;
   }
   span {
@@ -27,73 +49,28 @@
       color:$black;
     }
   }
-}
-.projectsquare {
-  position: relative;
-  overflow:hidden;
-  height:0;
-  padding-bottom: 100%;
 
-}
-.projectsquare__img {
-  display: block;
-  margin:0;
-  padding:0;
-  position: absolute;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  img {
+  &:after {
+    margin-top: 1em;
+    content:'';
     display: block;
+    width: 1.5em;
+    height: .25em;
+    background-color: map-get($foundation-palette, alert);
+    .ps--dark & {
+      background-color: $primary-color;
+    }
+    .ps--accent & {
+      background-color: $body-font-color;
+    }
   }
-
 }
 
-.projectsquare__name {
-  margin:0;
-  font-size: 1rem;
-  position: absolute;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  > a {
-    opacity: 1;
-    text-align: center;
-    //color:$black;
-    color:transparent;
-    //font-weight: $global-weight-bold;
-    font-size: .75rem;
-    line-height: 1;
-    //color:transparent;
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    padding:1rem;
-    background-color: rgba(#000,.5);
-    transition: opacity .2s ease-in;
-    //transform:translateY(-50%);
-    &:before {
-      content:'';
-      display: block;
-      width:100%;
-      height:50%;
-      height:calc(100% - .5rem);
-    }
-    // &:after {
-    //   bottom:auto;
-    //   top:100%;
-    // }
-    &:hover, &:focus {
-      opacity: 0;
-      //filter: sepia(1);
-    }
+.prettytitle--centered {
+  text-align: center;
+  &:after {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -143,9 +120,7 @@
 .card__text {
   padding:0 8%;
   font-size: .875rem;
-  @include breakpoint(xlarge) {
-    font-size: 1rem;
-  }
+
   .card--narrow & {
     @include breakpoint(large) {
       font-size: .75rem;
@@ -156,70 +131,6 @@
   }
   .card--simple & {
     padding:0;
-  }
-}
-
-.membersquare {
-  margin-bottom: 3rem;
-}
-
-.membersquare__photo {
-  margin:0 0 .75rem;
-  padding: 0;
-}
-.membersquare__name {
-  color:$black;
-  font-weight: 400;
-  font-size: .875rem;
-  margin-bottom: 0;
-  line-height: 1.4;
-}
-
-.membersquare__jobtitle {
-  font-size: .875rem;
-  line-height: 1.4;
-  font-style: italic;
-  color:$primary-color;
-  margin-bottom: .75rem;
-}
-.membersquare__descr {
-  font-size: .875rem;
-  border-top: 1px solid $primary-color;
-  padding-top: .5rem;
-  p {
-    margin-bottom: .5rem;
-  }
-}
-
-.membersquare__email {
-  font-size: .75rem;
-  color:$black;
-  font-weight: 400;
-  transition: color .2s;
-  &.hover, &:focus {
-    color:$primary-color;
-  }
-}
-
-
-.clientlogo {
-  //background-color: red;
-  margin:0 0 1rem;
-  height:0;
-  padding:0 0 66.666%;
-  position: relative;
-  > img {
-    position: absolute;
-    left:0;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%) translateY(-50%);
-    width:100%;
-    max-width:73%;
-    max-height:90%;
-  }
-  figcaption {
-    display: none;
   }
 }
 

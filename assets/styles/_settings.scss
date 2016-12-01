@@ -50,7 +50,7 @@ $sans-serif: 'Raleway', sans-serif;
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1440);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #d08900,
@@ -59,7 +59,7 @@ $foundation-palette: (
   warning: #fee56e,
   alert: #ffc217
 );
-$light-gray: #e6e6e6;
+$light-gray: #8a8a8a;
 $medium-gray: #414042;
 $dark-gray: #333333;
 $black: #000000;
@@ -90,6 +90,7 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  ultralarge: 1600px
 );
 $breakpoint-classes: (small medium tablet large xlarge xxlarge);
 
@@ -115,23 +116,23 @@ $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
     'h1': 28,
-    'h2': 28,
-    'h3': 19,
+    'h2': 22,
+    'h3': 18,
     'h4': 18,
     'h5': 17,
     'h6': 16,
   ),
-  medium: (
-    'h1': 36,
-    'h2': 36,
+  tablet: (
+    'h1': 38,
+    'h2': 24,
     'h3': 22,
     'h4': 20,
     'h5': 20,
     'h6': 16,
   ),
-  large : (
+  xlarge: (
     'h1': 48,
-    'h2': 36,
+    'h2': 30,
     'h3': 26,
     'h4': 22,
     'h5': 20,
@@ -169,9 +170,9 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
+$blockquote-color: $light-gray;
+$blockquote-padding: 3% 0 3% 6%;
+$blockquote-border: .5rem solid $primary-color;
 $cite-font-size: rem-calc(13);
 $cite-color: $dark-gray;
 $keystroke-font: $font-family-monospace;

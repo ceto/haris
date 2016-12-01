@@ -4,27 +4,6 @@
   }
 }
 
-.backtowork {
-  position: absolute;
-  right:0;
-  top:.25rem;
-  display: inline-block;
-  font-size: 1.25rem;
-  color:$black;
-  &:hover, &:focus {
-    color: $primary-color;
-  }
-  @include breakpoint('medium') {
-    right:-12.5%;
-  }
-  @include breakpoint('large') {
-    right:-50%;
-  }
-  @include breakpoint('xlarge') {
-    right:-25%;
-  }
-
-}
 .button.hollow {
   border-left: transparent !important;
   border-right: transparent !important;
@@ -145,4 +124,23 @@ input:focus::placeholder, textarea:focus::placeholder {
 .button {
   //font-family: $serif;
   //font-weight: $global-weight-bold;
+}
+
+blockquote, blockquote p {
+  //font-family: $serif;
+  font-size: 1.666rem;
+  //font-style: italic;
+}
+
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+.lead {
+
+  font-size: 112.5%;
+  @include breakpoint(tablet) {
+    font-size: 125%;
+  }
+
 }

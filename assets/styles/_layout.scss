@@ -1,13 +1,42 @@
 html {
   overflow-y: scroll;
   //background-color: $primary-color;
+  @include breakpoint(ultralarge) {
+    font-size: 112.5%;
+  }
 }
 body {
-  // position:relative;
-  // min-height: 100%;
-  // overflow-x: hidden;
+  // @include breakpoint(xxlarge) {
+  //   font-size: 112.5%;
+  // }
 }
 
+//.row hack
+
+.row {
+  @include breakpoint(tablet) {
+    padding-left: 2%;
+    padding-right: 2%;
+    & & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  @include breakpoint(xlarge) {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  @include breakpoint(xxlarge) {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+}
 
 
 
@@ -35,16 +64,12 @@ body {
 
 .ps {
   overflow: hidden;
-  padding-top: 5rem;
-  padding-top: 10vh;
-  padding-bottom: 4rem;
+  padding-top: 11vh;
+  padding-bottom: 11vh;
 }
 .ps--narrow {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  .page-template-tmpl-home &{
-    min-height:4rem;
-  }
 }
 .ps--full{
   min-height: calc(100vh - 4rem);

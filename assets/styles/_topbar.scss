@@ -4,6 +4,7 @@ body > .sticky-container {
 
 .top-bar {
     width: 100%;
+    z-index: 5;
     &.is-open {
         @media screen and (max-width: map-get($breakpoints, tablet) ) {
             // border-bottom: 1px solid rgba($light-gray,.5);
@@ -60,11 +61,6 @@ body > .sticky-container {
 
         width: 50%;
         > a {
-
-            font-size: .666rem;
-
-            min-width: rem-calc(95);
-
 
             transition: all .2s;
             white-space: nowrap;
