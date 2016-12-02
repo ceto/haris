@@ -19,6 +19,11 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 
+var rename      =require('gulp-rename');
+var svgstore    =require('gulp-svgstore');
+var svgmin      =require('gulp-svgmin');
+var inject      =require('gulp-inject');
+
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
 
@@ -208,6 +213,24 @@ gulp.task('fonts', function() {
     .pipe(browserSync.stream());
 });
 
+//SVG fonts inject
+gulp.task('svgicons', function () {
+  var svgs = gulp
+        .src('assets/icons/*.svg')
+        .pipe(rename({prefix: 'icon-'}))
+        .pipe(svgmin())
+        .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents (filePath, file) {
+      return file.contents.toString();
+  }
+
+  return gulp
+      .src('templates/svg-icons.php')
+      .pipe(inject(svgs, { transform: fileContents }))
+      .pipe(gulp.dest('templates'));
+});
+
 // ### Images
 // `gulp images` - Run lossless compression on all the images.
 gulp.task('images', function() {
@@ -246,6 +269,24 @@ gulp.task('watch', function() {
   browserSync.init({
     files: ['{lib,templates}/**/*.php', '*.php'],
     proxy: config.devUrl,
+    notify: {
+      styles: {
+          top: 'auto',
+          bottom: '0',
+          right: 'auto',
+          left: '0',
+          margin: '0px',
+          padding: '5px',
+          position: 'fixed',
+          fontSize: '10px',
+          zIndex: '9999',
+          borderRadius: '0px 5px 0px',
+          color: 'white',
+          textAlign: 'center',
+          display: 'block',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)'
+      }
+    },
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
       blacklist: ['/wp-admin/**']
@@ -255,7 +296,9 @@ gulp.task('watch', function() {
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
+  gulp.watch([path.source + 'icons/**/*.svg'], ['svgicons']);
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
+
 });
 
 // ### Build
@@ -264,7 +307,7 @@ gulp.task('watch', function() {
 gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
-              ['fonts', 'images'],
+              ['fonts', 'images', 'svgicons'],
               callback);
 });
 
