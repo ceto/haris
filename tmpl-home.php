@@ -8,7 +8,8 @@
   <div class="hero__content">
     <div class="row">
       <div class="columns">
-        <h2 class="hero__subtext">Haris Park</h2>
+      <svg><use xlink:href="#icon-haris-park"></use></svg>
+        <!-- <h2 class="hero__subtext">Haris Park</h2> -->
         <h2 class="hero__maintext">A budai polgárság új találkozóhelye</h2>
         <h3 class="hero__discl">Nyitás: 2017 nyarán</h3>
         <a href="#homelead" class="button wow fadeInLeft">Részletek</a>

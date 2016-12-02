@@ -21,6 +21,7 @@
 }
 .hentry__title {
   //text-align: center;
+  //color:$body-font-color;
   margin-bottom: .125em;
   .hentry--leader & {
     font-size: rem-calc(28);
@@ -30,6 +31,10 @@
     @include breakpoint(xlarge) {
       font-size: rem-calc(48);
     }
+  }
+
+  a {
+    //color:inherit;
   }
 }
 .hentry__meta {

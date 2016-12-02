@@ -18,7 +18,7 @@
 }
 
 .pace .pace-progress {
-  background: $primary-color;
+  background: map-get($foundation-palette, alert);
   position: fixed;
   z-index: 2000;
   top: 0;

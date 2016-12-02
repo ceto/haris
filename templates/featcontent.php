@@ -1,4 +1,4 @@
-<article <?php post_class('hentry--inarchive hentry--leader row ps'); ?>>
+<article <?php post_class('hentry--inarchive hentry--leader row ps ps--notop'); ?>>
   <div class="columns">
     <header class="hentry__header">
       <h2 class="hentry__title">

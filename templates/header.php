@@ -3,8 +3,8 @@
     <div class="row">
       <div class="columns">
         <div class="top-bar-title">
-          <a class="homelogo" href="<?= esc_url(home_url('/')); ?>" data-realhome="<?php the_permalink(45); ?>">
-            <?php bloginfo('name'); ?>
+          <a class="homelogo" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
+            <svg class="homelogo__img" alt="<?php bloginfo('name'); ?>"><use xlink:href="#icon-hp"></use></svg>
           </a>
           <span class="csiki" data-responsive-toggle="responsive-menu" data-hide-for="tablet">
             <button class="menu-icon" type="button" data-toggle></button>

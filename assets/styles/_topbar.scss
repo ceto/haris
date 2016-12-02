@@ -91,6 +91,7 @@ body > .sticky-container {
     font-size: 1.75rem;
     font-weight: $global-weight-bold;
     line-height: 90px;
+    text-align: left;
 
     display: block;
     //width:10rem;
@@ -111,6 +112,20 @@ body > .sticky-container {
         line-height: 60px;
 
         height: 60px;
+    }
+
+}
+.homelogo__img {
+    width:4rem;
+    height:4rem;
+    margin-top: 1rem;
+    .mainelem {
+        fill: red; //map-get($foundation-palette, alert);
+    }
+    .top-bar.is-stuck & {
+        width:3rem;
+        height:3rem;
+        margin-top: .333rem;
     }
 }
 

@@ -71,9 +71,18 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
+
+.ps--notop {
+  padding-top: 0;
+}
+.ps--nobottom {
+  padding-bottom: 0;
+}
 .ps--full{
   min-height: calc(100vh - 4rem);
 }
+
 
 
 .ps--dark {

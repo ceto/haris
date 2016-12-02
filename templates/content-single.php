@@ -1,11 +1,11 @@
 <?php while (have_posts()) : the_post(); ?>
-<article <?php post_class(); ?>>
-  <div class="row ps">
+<article <?php post_class('hentry--single ps'); ?>>
+  <div class="row">
     <div class="columns">
       <?php get_template_part('templates/post','header'); ?>
     </div>
   </div>
-  <div class="row">
+  <div class="row ps">
     <div class="columns tablet-3 xlarge-2">
       share
     </div>
@@ -21,7 +21,7 @@
       <footer>
         <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'haris'), 'after' => '</p></nav>']); ?>
       </footer>
-      <?php comments_template('/templates/comments.php'); ?>
+      <?php //comments_template('/templates/comments.php'); ?>
     </div>
   </div>
 </article>
