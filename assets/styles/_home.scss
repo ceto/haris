@@ -41,7 +41,24 @@
   right:0;
 }
 
-
+.mapsection {
+  position: relative;
+  background-color: map-get($foundation-palette, warning);
+  color:$dark-gray;
+}
+.thegmap {
+  height:25rem;
+  width:100%;
+  background-color: map-get($foundation-palette, warning);
+  @include breakpoint(large) {
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:calc(50% - .9375rem);
+    height: auto;
+  }
+}
 
 
 @keyframes "heartpulse" {

@@ -1,4 +1,4 @@
-<div class="ps ps--accent ps--narrow">
+<div class="ps ps--dark ps--narrow">
 <div class="row">
   <div class="columns medium-8">
 

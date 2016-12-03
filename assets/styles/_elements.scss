@@ -1,10 +1,9 @@
-
-  .mainelem {
-    fill: map-get($foundation-palette, alert);
-  }
-  .subelem {
-    fill: #fff;
-  }
+.mainelem {
+  fill: map-get($foundation-palette, alert);
+}
+.subelem {
+  fill: #fff;
+}
 
 .projectcontent {
   span {

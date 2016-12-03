@@ -1,5 +1,5 @@
 body > .sticky-container {
-    min-height: rem-calc(90);
+    min-height: 7.5rem;
 }
 
 .top-bar {
@@ -14,8 +14,8 @@ body > .sticky-container {
         }
     }
     &.is-stuck {
-        border-bottom: 1px solid rgba($light-gray,.5);
-        background-color: rgba(#fff,.9);
+        border-bottom: 1px solid rgba($light-gray,.125);
+        background-color: rgba(#fff,.95);
     }
 }
 
@@ -61,7 +61,6 @@ body > .sticky-container {
 
         width: 50%;
         > a {
-
             transition: all .2s;
             white-space: nowrap;
 
@@ -74,58 +73,42 @@ body > .sticky-container {
             &:hover {
 
             }
-            .top-bar.is-stuck & {
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
-            }
+            // .top-bar.is-stuck & {
+            //     padding-top: 1.5rem;
+            //     padding-bottom: 1.5rem;
+            // }
         }
     }
 }
 
 .top-bar .menu--main {
     @include clearfix();
+    @include breakpoint(tablet) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
-.homelogo {
-
-    font-size: 1.75rem;
-    font-weight: $global-weight-bold;
-    line-height: 90px;
-    text-align: left;
-
-    display: block;
-    //width:10rem;
-    // text-indent: 100%;
-    // white-space: nowrap;
-    overflow: hidden;
-    //background-color: red;
-
-    height: 90px;
-
-    color: $black;
-    // background-image: url('../images/spire.svg');
-    // background-size: 100% auto;
-    // background-repeat: no-repeat;
-    // background-position: center 40%;
-    .top-bar.is-stuck & {
-        font-size: 1.5rem;
-        line-height: 60px;
-
-        height: 60px;
+.top-bar.is-stuck .menu--main {
+    @include breakpoint(tablet) {
+        padding:0;
     }
+}
+.homelogo {
+    display: block;
+    padding-top:1.25rem;
+    padding-bottom: .75rem;
 
+    .top-bar.is-stuck & {
+        padding: .333rem 0 0 0;
+    }
 }
 .homelogo__img {
-    width:4rem;
-    height:4rem;
-    margin-top: 1rem;
-    .mainelem {
-        fill: red; //map-get($foundation-palette, alert);
-    }
+    width:4.666rem;
+    height:4.666rem;
     .top-bar.is-stuck & {
-        width:3rem;
-        height:3rem;
-        margin-top: .333rem;
+        width:3.25rem;
+        height:3.25rem;
     }
 }
 
