@@ -13,6 +13,12 @@
       ],
       "main": true
     },
+    "login.css": {
+      "files": [
+        "styles/login.scss"
+      ],
+      "main": true
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"

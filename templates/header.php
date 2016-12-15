@@ -26,6 +26,15 @@
             ?>
           </nav>
         </div>
+        <?php if (!is_user_logged_in()) : ?>
+          <a class="button small" href="<?= wp_login_url();  ?>">
+            <?= __('Login','haris')  ?>
+          </a>
+        <?php else : ?>
+          <a class="button small success" href="<?= wp_logout_url(); ?>">
+            <?= __('Logut','haris')  ?>
+          </a>
+        <?php endif; ?>
       </div>
     </div>
   </header>
