@@ -26,15 +26,18 @@
   .hentry--leader & {
     font-size: rem-calc(28);
     @include breakpoint(tablet) {
-      font-size: rem-calc(38);
+      font-size: rem-calc(32);
     }
     @include breakpoint(xlarge) {
-      font-size: rem-calc(48);
+      font-size: rem-calc(40);
     }
   }
 
   a {
-    //color:inherit;
+    color:inherit;
+    &:hover, &:focus {
+      color: map-get($foundation-palette, alert);
+    }
   }
 }
 .hentry__meta {

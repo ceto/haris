@@ -16,7 +16,7 @@
   //font-weight: $global-weight-bold;
   margin:0 0 1em;
   line-height: 1.1;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   @include breakpoint(tablet) {
       font-size: 1.666rem;
   }
@@ -181,4 +181,16 @@
 
 .plist {
   display: none;
+}
+
+
+.widget {
+  margin-bottom: 3rem;
+}
+
+.widget__title {
+  color: $primary-color;
+  @include breakpoint(xlarge) {
+    //font-size: 1.75rem;
+  }
 }

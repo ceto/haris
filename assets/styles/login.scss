@@ -1,9 +1,11 @@
 @import "settings";
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
-//@include foundation-everything;
+@include foundation-everything;
 
 
 body.login {
+  background-color: map-get($foundation-palette, warning);
+  background-color: $dark-gray;
   div#login {
     h1 {
       a {
@@ -11,6 +13,7 @@ body.login {
       }
     }
     form#loginform {
+      //background-color: map-get($foundation-palette, warning);
       p {}
       p label {}
       input {}
@@ -22,7 +25,9 @@ body.login {
       p.submit input#wp-submit {}
     }
     p#nav {}
-    p#nav a {}
+    p#nav a {
+      //color:map-get($foundation-palette, warning);
+    }
     p#backtoblog {}
     p#backtoblog a {}
   }

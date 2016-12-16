@@ -78,18 +78,18 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Primary', 'haris'),
     'id'            => 'sidebar-primary',
-    'before_widget' => '<section class="column widget %1$s %2$s">',
+    'before_widget' => '<section class="widget widget--primary %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget__title">',
     'after_title'   => '</h3>'
   ]);
 
   register_sidebar([
     'name'          => __('Footer', 'haris'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section class="widget widget--footer %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget__title">',
     'after_title'   => '</h3>'
   ]);
 }

@@ -71,7 +71,7 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: 400;
-$global-weight-bold: 700;
+$global-weight-bold: 600;
 $global-weight-extrabold: 900;
 $global-radius: 3px;
 $global-text-direction: ltr;
@@ -123,7 +123,7 @@ $header-sizes: (
     'h6': 16,
   ),
   tablet: (
-    'h1': 38,
+    'h1': 32,
     'h2': 24,
     'h3': 22,
     'h4': 20,
@@ -131,15 +131,15 @@ $header-sizes: (
     'h6': 16,
   ),
   xlarge: (
-    'h1': 48,
-    'h2': 30,
-    'h3': 26,
-    'h4': 22,
+    'h1': 40,
+    'h2': 28,
+    'h3': 24,
+    'h4': 20,
     'h5': 20,
     'h6': 16,
   ),
 );
-$header-color: $primary-color;
+$header-color: inherit;
 $header-lineheight: 1.125;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
@@ -393,8 +393,9 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 1.5rem .875rem;
-$menu-item-color-active: map-get($foundation-palette, alert);
+$menu-item-padding: 1.6rem .875rem 1.4rem;
+//$menu-item-color-active: map-get($foundation-palette, alert);
+$menu-item-color-active: #fff;
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 

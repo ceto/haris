@@ -3,8 +3,9 @@ body > .sticky-container {
 }
 
 .top-bar {
-    width: 100%;
     z-index: 5;
+
+    width: 100%;
     &.is-open {
         @media screen and (max-width: map-get($breakpoints, tablet) ) {
             // border-bottom: 1px solid rgba($light-gray,.5);
@@ -49,35 +50,44 @@ body > .sticky-container {
 
     text-align: center;
     > li {
+        display: block;
+        float: left;
+
+        width: 50%;
+
+        &.active {
+            > a {
+                &:after {
+                    position: absolute;
+                    bottom: .875rem;
+                    content:'';
+                    display: block;
+                    left:.875rem;
+                    //right:.875rem;
+                    width:1rem;
+                    height: .2rem;
+                    background-color: map-get($foundation-palette, alert);
+                }
+            }
+        }
         @include breakpoint(tablet) {
             display: table-cell;
             float: none;
 
             width: auto;
         }
-
-        display: block;
-        float: left;
-
-        width: 50%;
         > a {
+            position: relative;
             transition: all .2s;
             white-space: nowrap;
-
-            &.active {
-                &:hover {
-                    cursor: default;
-
-                }
+            color:#fff;
+            font-weight: $global-weight-bold;
+            &:hover, &:focus {
+                color: map-get($foundation-palette, alert);
             }
-            &:hover {
-
-            }
-            // .top-bar.is-stuck & {
-            //     padding-top: 1.5rem;
-            //     padding-bottom: 1.5rem;
-            // }
         }
+
+
     }
 }
 
@@ -91,31 +101,52 @@ body > .sticky-container {
 
 .top-bar.is-stuck .menu--main {
     @include breakpoint(tablet) {
-        padding:0;
+        padding: 0;
     }
 }
 .homelogo {
     display: block;
-    padding-top:1.25rem;
-    padding-bottom: .75rem;
 
+    padding-top: 1.25rem;
+    padding-bottom: .75rem;
     .top-bar.is-stuck & {
-        padding: .333rem 0 0 0;
+        padding: .5rem 0 0 0;
     }
 }
 .homelogo__img {
-    width:4.666rem;
-    height:4.666rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    @include breakpoint(tablet) {
+        width: 4.666rem;
+        height: 4.666rem;
+    }
     .top-bar.is-stuck & {
-        width:3.25rem;
-        height:3.25rem;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.top-bar-userthings {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    @include breakpoint(tablet) {
+        position: static;
+        float:right;
+        margin-left: 1.333rem;
+    }
+    .button {
+        margin:1.875rem 0 0;
+        @include breakpoint(tablet) {
+            margin-top: 2.5rem;
+        }
+        .top-bar.is-stuck & {
+            margin:1rem 0 0;
+        }
     }
 }
 
 .csiki {
-    @include breakpoint(tablet) {
-        display: none;
-    }
 
     position: absolute;
     top: 0;
@@ -126,10 +157,13 @@ body > .sticky-container {
     width: 90px;
     height: 90px;
     padding: 2.125rem 0 0 3.25rem;
-
     .top-bar.is-stuck & {
-      padding: 1.125rem 0 0 3.25rem;
-      //width: 60px;
-      height: 60px;
+        //width: 60px;
+        height: 60px;
+        padding: 1.125rem 0 0 3.25rem;
+    }
+
+    @include breakpoint(tablet) {
+        display: none;
     }
 }

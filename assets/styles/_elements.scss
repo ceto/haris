@@ -11,6 +11,9 @@
   }
 }
 
+.button, button {
+  font-weight: $global-weight-bold;
+}
 .button.hollow {
   border-left: transparent !important;
   border-right: transparent !important;
@@ -149,5 +152,43 @@ blockquote p:last-of-type {
   @include breakpoint(tablet) {
     font-size: 125%;
   }
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  p + &, ul + &, ol + &, blockquote + & {
+    margin-top: 2rem;
+  }
+
+  .page .content & {
+    @include breakpoint(tablet) {
+      @include grid-col;
+      @include grid-col-pos(-4);
+      @include grid-col-size(4);
+      position: absolute;
+      margin-top: .125rem;
+      & + p {
+        //margin-top: 2.5rem;
+      }
+    }
+    @include breakpoint(xlarge) {
+      @include grid-col-pos(-3);
+      @include grid-col-size(3);
+      position: absolute;
+    }
+
+    &:after {
+      margin-top: .5em;
+      content:'';
+      display: block;
+      width: 1.5rem;
+      height: .25rem;
+      background-color: map-get($foundation-palette, alert);
+    }
+  }
+}
+
+.page .content {
 
 }

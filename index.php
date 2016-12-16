@@ -1,4 +1,4 @@
-<!-- <?php get_template_part('templates/page', 'header'); ?> -->
+<?php get_template_part('templates/page', 'header'); ?>
 <?php if (!have_posts()) : ?>
 <div class="row ps">
   <div class="columns tablet-6 medium-centered">

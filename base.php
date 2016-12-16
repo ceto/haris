@@ -16,11 +16,9 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div id="document" class="document docfade" role="document">
-      <div class="content">
-        <main id="main" class="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
-      </div><!-- /.content -->
+      <main id="main" class="main">
+        <?php include Wrapper\template_path(); ?>
+      </main><!-- /.main -->
     </div><!-- /.wrap -->
     <?php
       do_action('get_footer');

@@ -1,24 +1,22 @@
-<div class="ps ps--dark ps--narrow">
-<div class="row">
-  <div class="columns medium-8">
-
-    <h3>Kapcsolatfelvétel</h3>
-    <p>Bármilyen kérdésük van, az alábbi e-mail címen várjuk jelentkezésüket: <a href="mailto:haris@haris.hu">haris@haris.hu</a></p>
-    <svg class="icon"><use xlink:href="#icon-hp"></use></svg>
-  </div>
-  <div class="columns medium-4">
-    <h3>Impresszum</h3>
-
-    <p>Haris Park Kft.<br>
-    1122, Budapest<br>
-    Városmajor utca 48/b</p>
-  </div>
-</div>
-</div>
-<footer class="sitefooter ps ps--dark">
-  <div class="row wow fadeInUp">
-    <div class="columns">
-      <?php dynamic_sidebar('sidebar-footer'); ?>
+<aside class="siteinfo ps ps--dark ps--nobottom">
+    <div class="row">
+        <div class="columns tablet-4 xlarge-6">
+            <svg class="icon"><use xlink:href="#icon-hp"></use></svg>
+        </div>
+        <div class="columns tablet-8 xlarge-6">
+            <?php dynamic_sidebar('sidebar-footer'); ?>
+            <?php if (!is_user_logged_in()) : ?>
+            <p><a class="button small" href="<?= wp_registration_url();  ?>">
+                <?= __('Register','haris')  ?>
+            </a></p>
+            <?php endif; ?>
+        </div>
     </div>
-  </div>
+</aside>
+<footer class="sitefooter ps ps--dark ps--narrow">
+    <div class="row wow fadeInUp">
+        <div class="columns tablet-8 tablet-push-4 xlarge-6 xlarge-push-6">
+            &copy; 2016 All rights reserved &middot; Haris Park Kft. &middot; Site by <a href="http://hydrogene.hu" target="_blank">Hydrogene</a>
+        </div>
+    </div>
 </footer>

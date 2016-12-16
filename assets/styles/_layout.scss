@@ -44,8 +44,10 @@ body {
   //margin-top: -90px;
   //position: relative;
   //min-height: calc(100vh - 4rem);
-  transition: opacity .4s linear;
-  &.docfade {
+  .main > *:not(.hero) {
+    transition: opacity .4s linear;
+  }
+  &.docfade .main > *:not(.hero){
     opacity: 0;
     .no-js &{
       opacity:1;
@@ -53,9 +55,9 @@ body {
   }
 
   //imagehed negativ
-  .page-template-tmpl-home & {
+  //.page-template-tmpl-home & {
     margin-top: -7.5rem;
-  }
+  //}
 
 }
 .pageheader {
@@ -88,7 +90,7 @@ body {
 .ps--dark {
   background-color: $dark-gray;
   color:$white;
-  a {
+  a:not(.button) {
     color: map-get($foundation-palette, alert);
     &:hover, &:focus {
       color: map-get($foundation-palette, primary);
