@@ -146,6 +146,26 @@ blockquote p:last-of-type {
   margin-bottom: 0;
 }
 
+
+figure {
+  margin: 0 auto 2rem;
+  max-width: 100%;
+  height: auto;
+  p + &, ul + &, ol + & {
+    margin-top: 2rem;
+  }
+}
+
+figcaption {
+  font-family: $serif;
+  //font-style: italic;
+  //color:$primary-color;
+  padding-top: .5em;
+  font-size: .875rem;
+  text-align: center;
+  opacity: .75;
+}
+
 .lead {
 
   font-size: 112.5%;

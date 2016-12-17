@@ -5,6 +5,7 @@
 ?>
 <?php while (have_posts()) : the_post(); ?>
 <section class="hero hero--home">
+<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
   <div class="hero__content">
     <div class="row">
       <div class="columns">

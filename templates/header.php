@@ -1,5 +1,5 @@
 <div data-sticky-container>
-  <header class="top-bar" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="90">
+  <header class="top-bar dark" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="180">
     <div class="row">
       <div class="columns">
         <div class="top-bar-title">

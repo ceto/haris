@@ -1,13 +1,4 @@
 <?php use Roots\Sage\Titles; ?>
-<section class="hero hero--narrow">
-  <div class="hero__content">
-    <div class="row">
-      <div class="columns">
-        <h2><?= Titles\title(); ?></h2>
-      </div>
-    </div>
-  </div>
-</section>
 <?php if (is_page() ) : ?>
 <div class="pagehead row ps">
   <div class="columns">

@@ -65,6 +65,16 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
+
+  $hiargs = array(
+    'width'         => 5422,
+    'height'        => 1410,
+    'default-image' => Assets\asset_path('images/fortepan.jpg'),
+    'uploads'       => true,
+  );
+  add_theme_support( 'custom-header', $hiargs );
+
+
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
   add_editor_style(Assets\asset_path('styles/main.css'));
