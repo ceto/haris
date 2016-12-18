@@ -18,90 +18,51 @@
   </div>
 </div>
 </section>
-<section class="homenews ps ps--narrow ps--dark">
-<div class="row">
-  <div class="columns">
-    <strong>2016. október 19.:</strong> <a href="#">Elkezdtődött a budai lövőház báltermének tetőtér rekonstrukciója</a><a href="<?php the_permalink(get_option( 'page_for_posts' )); ?>" style="float:right;"><small>Összes hír &hellip;</small></a>
-  </div>
-</div>
-</section>
+<?php get_template_part('templates/promorow'); ?>
 <section class="ps homelead">
 <div class="row">
   <div class="columns">
     <h2 class="prettytitle prettytitle--centered wow fadeInUp" >
-    Rendezvényközpont és étterem a Marczibányi téren
-    <small>Tisztelgés a késő reformkori budai polgárság találkozóhelyének</small>
+      <?php the_field('leadsectitle'); ?>
     </h2>
   </div>
 </div>
 <div class="row wow fadeInUp">
   <div class="columns medium-9 large-8 medium-centered">
-    <p>2017-ben megnyílik a Haris Park Buda szívében a Marczibányi téren, melyben vendéglátó egységek és egy rendezvényközpont kapnak helyet. Egy igazi közösségi tér, amely történetéhez hűen a budai értelmiség és polgárság találkozóhelye, környékbeliek kedvelt kerthelyisége, elegáns bálok otthona.</p>
-    <p>Missziónk, hogy a magas színvonalú szolgáltatás mellett jó viszonyt ápoljunk a környéken lakókkal és környezetünkkel, a fenntarthatóságra és az elérhetőségre kiemelt figyelmet fordítva (napkollektorok a tetőn, közel 5000 m2 zöldfelület, társadalmi felelősség-vállaláshoz kötődő programok). Az eredeti funkciójának megfelelően helyreállítjuk a társasági életet szolgáló épületrészeket, a régi kerthelyiséget, mely remélhetőleg hamarosan a budaiak törzshelyévé válik.</p>
-    <p>Célunk, hogy visszatérjen a budai polgárok társasági élet irányi igénye, melyet XXI. századi  minőségben szolgálunk ki.</p>
+    <?php the_content(); ?>
     <a href="#" class="homeintromore"><i class="icon icon--plus"></i></a>
   </div>
 </div>
 </section>
 <section id="about" class="ps ps--dark">
-<div class="row">
-  <div class="columns">
-    <h2 class="prettytitle wow fadeInRight">
-    Üzleti és családi események
-    <small>az évszázados gesztenyefák alatt</small>
-    </h2>
+  <div class="row">
+    <div class="columns">
+      <h2 class="prettytitle wow fadeInRight">
+        <?php the_field('cardsectitle'); ?>
+      </h2>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="columns tablet-9 tablet-centered large-12">
-    <div class="row small-up-2 large-up-4 whatwedogrid">
-      <div class="column">
-        <div class="card card--simple">
-          <figure class="card__illustration ">
-            <img src="http://placehold.it/640x480/?text=illustration" alt="">
-          </figure>
-          <h4 class="card__title">
-          Konferenciák és üzleti rendezvények
-          </h4>
-          <div class="card__text"><p>Komplexumunk elkészültével alkalmas lesz csendes és hangulatos kerti  és többfunkciós beltéri rendezvények befogadására.  Tárgyalóink alkalmasak a kisebb létszámú megbeszélések, tréningek, workshopok megrendezésére. Termeink hatalmas ablakai megfelelően sötétíthetőek, klimatizáltak, hang és fénytechnikával felszereltek.</p></div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card card--simple">
-          <figure class="card__illustration ">
-            <img src="http://placehold.it/640x480/?text=illustration" alt="">
-          </figure>
-          <h4 class="card__title">
-          Pompás bálok és esküvők otthona
-          </h4>
-          <div class="card__text"><p>Történelmi báltermünk 150 főnek biztosít kényelmes elrendezést bálokhoz, esküvőkhöz, gálavacsorákhoz. Nyári hónapokban hatalmas kertünkben is lehet ünnepelni, a természetben, mégis percekre a belvárostól. Kisebb, kápolnai hangulatot idéző oldalszárnyunk intimebb esküvők meghitt helyszíne.</p></div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card card--simple">
-          <figure class="card__illustration ">
-            <img src="http://placehold.it/640x480/?text=illustration" alt="">
-          </figure>
-          <h4 class="card__title">
-          Étterem és tetőtéri bár
-          </h4>
-          <div class="card__text"><p>Adózva a hely szellemének, a már lassan 100 éve megnyílt Kastély vendéglő helyén lesz egy 80 fős, magas színvonalú étterem, ahol a házias magyar konyha remekeit élvezhetik vendégeink. Az emeleten privát különtermek, és nyáron egy szabadtéri tetőbár növeli a gasztronómiai élményszerzés lehetőségét.</p></div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card card--simple">
-          <figure class="card__illustration ">
-            <img src="http://placehold.it/640x480/?text=illustration" alt="">
-          </figure>
-          <h4 class="card__title">
-          Kerthelyiség az ősfás parkban
-          </h4>
-          <div class="card__text"><p>Termetes gesztenyefák, japán csüngőakác, évszázados mogyorófák és sok más csodás fa öleli körbe a 120 fős kerthelyiségünket, melyet egy kültéri konyha szolgál ki könnyed, nyári különlegességekkel. Bízunk benne, hogy a környék lakói szívesen betérnek majd hozzánk egy kávéra, családi ebédre vagy romantikus vacsorára az árnyas parkba.</p></div>
-        </div>
+  <div class="row">
+    <div class="columns tablet-9 tablet-centered large-12">
+      <div class="row small-up-2 large-up-4 whatwedogrid">
+        <?php while ( have_rows('cards') ) : the_row(); ?>
+          <div class="column">
+            <div class="card card--simple">
+              <figure class="card__illustration">
+                <img src="http://placehold.it/640x480/?text=illustration" alt="">
+                <?php
+                // $image = get_sub_field('pr_illustration');
+                // echo wp_get_attachment_image($image['id'], 'large' );
+                ?>
+              </figure>
+              <h4 class="card__title"><?php the_sub_field('title'); ?></h4>
+              <div class="card__text"><?php the_sub_field('description'); ?></div>
+            </div>
+          </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </div>
-</div>
 </section>
 <section id="homedata" class="ps homedata" data-magellan-target="homedata">
 <div class="row">
