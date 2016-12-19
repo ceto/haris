@@ -44,15 +44,14 @@
   </div>
   <div class="row">
     <div class="columns tablet-9 tablet-centered large-12">
-      <div class="row small-up-2 large-up-4 whatwedogrid">
+      <div class="row small-up-2 large-up-4">
         <?php while ( have_rows('cards') ) : the_row(); ?>
           <div class="column">
             <div class="card card--simple">
               <figure class="card__illustration">
-                <img src="http://placehold.it/640x480/?text=illustration" alt="">
                 <?php
-                // $image = get_sub_field('pr_illustration');
-                // echo wp_get_attachment_image($image['id'], 'large' );
+                  $image = get_sub_field('illustration');
+                  echo wp_get_attachment_image($image['id'], 'large' );
                 ?>
               </figure>
               <h4 class="card__title"><?php the_sub_field('title'); ?></h4>
