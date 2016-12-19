@@ -7,7 +7,7 @@
             <svg class="homelogo__img" alt="<?php bloginfo('name'); ?>"><use xlink:href="#icon-hp"></use></svg>
           </a>
           <span class="csiki" data-responsive-toggle="responsive-menu" data-hide-for="tablet">
-            <button class="menu-icon" type="button" data-toggle></button>
+            <button class="menu-icon" type="button" data-toggle><!-- <?= __('Menu','haris')  ?> --></button>
           </span>
         </div>
         <div class="top-bar-userthings">

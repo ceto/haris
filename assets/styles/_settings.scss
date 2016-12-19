@@ -554,8 +554,9 @@ $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $black;
-$titlebar-icon-color-hover: $medium-gray;
+//$titlebar-icon-color:  map-get( $foundation-palette, primary );
+$titlebar-icon-color:  #fff;
+$titlebar-icon-color-hover: map-get( $foundation-palette, secondary );
 $titlebar-icon-spacing: 0.25rem;
 
 // 35. Tooltip

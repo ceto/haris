@@ -33,9 +33,13 @@ body > .sticky-container {
 }
 
 .responsive-menu {
+    height: calc(100vh - 4rem);
+    position: relative;
     @include breakpoint(tablet) {
         display: block;
         clear: none;
+        height: auto;
+        position: static;
     }
 
     display: none;
@@ -47,13 +51,23 @@ body > .sticky-container {
 
 .menu--main {
     font-weight: 400;
-
     text-align: center;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width:100%;
+    @include breakpoint(tablet) {
+        position: static;
+        top: auto;
+        transform: none;
+        width: auto;
+    }
     > li {
         display: block;
-        float: left;
+        @include breakpoint(tablet) {
+            display: table-cell;
+        }
 
-        width: 50%;
 
         &.active {
             > a {
@@ -70,18 +84,18 @@ body > .sticky-container {
                 }
             }
         }
-        @include breakpoint(tablet) {
-            display: table-cell;
-            float: none;
 
-            width: auto;
-        }
         > a {
             position: relative;
+            display: inline-block;
             transition: all .2s;
             white-space: nowrap;
             color:#fff;
             font-weight: $global-weight-bold;
+            font-size: 1.25rem;
+            @include breakpoint(tablet) {
+                font-size: 1rem;
+            }
             &:hover, &:focus {
                 color: map-get($foundation-palette, alert);
             }
@@ -127,12 +141,8 @@ body > .sticky-container {
 }
 
 .top-bar-userthings {
-    position: absolute;
-    top: 0;
-    right: 60px;
+    float:right;
     @include breakpoint(tablet) {
-        position: static;
-        float:right;
         margin-left: 1.333rem;
     }
     .button {
@@ -150,17 +160,18 @@ body > .sticky-container {
 
     position: absolute;
     top: 0;
-    right: 0;
+    left: calc(50% - .666rem);
 
     display: block;
 
-    width: 90px;
+    //width: 90px;
     height: 90px;
-    padding: 2.125rem 0 0 3.25rem;
+    padding: 2.125rem 0 0;
+
     .top-bar.is-stuck & {
         //width: 60px;
         height: 60px;
-        padding: 1.125rem 0 0 3.25rem;
+        padding: 1.125rem 0 0;
     }
 
     @include breakpoint(tablet) {
