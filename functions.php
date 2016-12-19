@@ -17,6 +17,7 @@ $sage_includes = [
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php', // Theme customizer
+  'lib/gallery.php',     // Blockgrid gallery by ceto
   'lib/custom.php'     // Custom code by ceto
 
 ];

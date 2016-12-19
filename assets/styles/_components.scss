@@ -211,3 +211,21 @@
 
     color: $primary-color;
 }
+
+
+.gallery {
+    margin: 0 auto 2rem;
+    p + &, ul + &, ol + & {
+        margin-top: 2rem;
+    }
+}
+
+.gallery__item {
+    a {
+        outline: none;
+    }
+}
+
+.gallery__item__caption {
+    font-size: .75rem;
+}
