@@ -99,7 +99,7 @@ body {
 }
 
 .ps--accent {
-  background-color: map-get($foundation-palette, warning);
+  background-color: map-get($foundation-palette, alert);
   color:$dark-gray;
   a {
     &:hover, &:focus {

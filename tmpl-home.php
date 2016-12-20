@@ -5,7 +5,6 @@
 ?>
 <?php while (have_posts()) : the_post(); ?>
 <section class="hero hero--home">
-<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
   <div class="hero__content">
     <div class="row">
       <div class="columns">
@@ -34,7 +33,7 @@
   </div>
 </div>
 </section>
-<section id="about" class="ps ps--dark">
+<section class="homeabout ps ps--dark">
   <div class="row">
     <div class="columns">
       <h2 class="prettytitle wow fadeInRight">
@@ -119,8 +118,15 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('thegmap'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: 47.513919, lng: 19.020709},
+          zoom: 14,
+          styles: [{featureType: "landscape",stylers: [{saturation: -100}, {lightness: 65}, {visibility: "on"}]}, {featureType: "poi",stylers: [{saturation: -100}, {lightness: 51}, {visibility: "simplified"}]}, {featureType: "road.highway",stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "road.arterial",stylers: [{saturation: -100}, {lightness: -10}, {visibility: "on"}]}, {featureType: "road.local",stylers: [{saturation: -100}, {lightness: -15}, {visibility: "on"}]}, {featureType: "transit",stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "administrative.province",stylers: [{visibility: "off"}]}, {featureType: "water",elementType: "labels",stylers: [{visibility: "on"}, {lightness: -25}, {saturation: -100}]}, {featureType: "water",elementType: "geometry",stylers: [{hue: "#ffff00"}, {lightness: -25}, {saturation: -97}]}]
+        });
+        var myLatLng = new google.maps.LatLng(47.513919, 19.020709);
+        var officeMarker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          animation: google.maps.Animation.DROP,
         });
       }
     </script>

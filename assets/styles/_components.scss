@@ -69,7 +69,7 @@
 
         background-color: map-get($foundation-palette, alert);
         .ps--dark & {
-            background-color: $primary-color;
+            //background-color: $primary-color;
         }
         .ps--accent & {
             background-color: $body-font-color;
@@ -88,10 +88,11 @@
 .card {
     margin-top: 1rem;
     margin-bottom: 2rem;
+    text-shadow: 0 0 3px rgba(#000,.75);
 }
 
 .card__illustration {
-    max-width: 60%;
+    max-width: 66.666%;
     margin: 0 auto 2rem;
     padding: 0;
 
@@ -228,4 +229,14 @@
 
 .gallery__item__caption {
     font-size: .75rem;
+}
+
+.promorow {
+
+    time {
+        font-weight: $global-weight-bold;
+    }
+    small {
+        font-weight: $global-weight-bold;
+    }
 }

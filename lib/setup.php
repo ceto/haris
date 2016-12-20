@@ -67,9 +67,9 @@ function setup() {
 
 
   $hiargs = array(
-    'width'         => 5422,
-    'height'        => 1410,
-    'default-image' => Assets\asset_path('images/fortepan.jpg'),
+    'width'         => 2718,
+    'height'        => 1234,
+    'default-image' => Assets\asset_path('images/balos.jpg'),
     'uploads'       => true,
   );
   add_theme_support( 'custom-header', $hiargs );

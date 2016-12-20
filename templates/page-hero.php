@@ -9,9 +9,9 @@
     <div class="row">
       <div class="columns">
         <?php if (is_page() ): ?>
-          <h2><?= get_post_meta($post->ID, 'subtitle', true ); ?></h2>
+          <h2 class="hero__maintext"><?= get_post_meta($post->ID, 'subtitle', true ); ?></h2>
         <?php else : ?>
-          <h2><?= Titles\title(); ?></h2>
+          <h2 class="hero__maintext"><?= Titles\title(); ?></h2>
         <?php endif; ?>
       </div>
     </div>
