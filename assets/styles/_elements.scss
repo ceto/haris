@@ -187,9 +187,9 @@ h1, h2, h3, h4, h5, h6 {
       @include grid-col-pos(-4);
       @include grid-col-size(4);
       position: absolute;
-      margin-top: .125rem;
+      margin-top: 2.5rem;
       & + p {
-        //margin-top: 2.5rem;
+        margin-top: 3rem;
       }
     }
     @include breakpoint(xlarge) {
@@ -209,6 +209,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.page .content {
-
+.content {
+  > p:first-child {
+    display: none;
+  }
 }

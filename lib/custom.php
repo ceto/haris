@@ -1,7 +1,5 @@
 <?php
 
-  //add_post_type_support( 'page', 'excerpt' );
-
   // 1. customize ACF path
   add_filter('acf/settings/path', 'haris_acf_settings_path');
   function haris_acf_settings_path( $path ) {
