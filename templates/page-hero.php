@@ -10,8 +10,14 @@
       <div class="columns">
         <?php if (is_page() ): ?>
           <h2 class="hero__maintext"><?= get_post_meta($post->ID, 'subtitle', true ); ?></h2>
-        <?php else : ?>
+        <?php elseif (!is_single()) : ?>
           <h2 class="hero__maintext"><?= Titles\title(); ?></h2>
+        <?php else: ?>
+          <h2 class="hero__maintext">
+            <a href="<?= get_permalink( get_option( 'page_for_posts' ) ) ?>">
+              <?= __('Hírek', 'haris');  ?>
+            </a>
+          </h2>
         <?php endif; ?>
       </div>
     </div>

@@ -6,6 +6,10 @@
 body.login {
   background-color: map-get($foundation-palette, warning);
   background-color: $dark-gray;
+  background-size: cover;
+  background-position: center 28%;
+  background-repeat: no-repeat;
+  background-image: url(../images/jelmezesek.jpg);
   div#login {
     h1 {
       a {
@@ -24,11 +28,25 @@ body.login {
       p.submit {}
       p.submit input#wp-submit {}
     }
-    p#nav {}
-    p#nav a {
-      //color:map-get($foundation-palette, warning);
+    p#nav {
+      text-align: center;
+      color:#fff;
+      font-size: 1rem;
+      a {
+        color:inherit;
+        &:hover, &:focus {
+          color: map-get($foundation-palette, alert);
+        }
+      }
     }
-    p#backtoblog {}
+    p#backtoblog {
+      text-align: center;
+      font-weight: $global-weight-bold;
+      color: map-get($foundation-palette, alert);
+      a {
+        color:inherit;
+      }
+    }
     p#backtoblog a {}
   }
 }

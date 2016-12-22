@@ -69,7 +69,11 @@ $('document').ready(function() {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [1,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [1,1], // Will preload 0 - before current, and 1 after the current image
+      arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+      tPrev: 'Előző (Balra)', // title for left button
+      tNext: 'Következő (Jobbra)' // title for right button
     },
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',

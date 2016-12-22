@@ -83,7 +83,7 @@ function haris_blockgrid_gallery_shortcode( $attr ) {
     'size'       => 'thumbnail',
     'include'    => '',
     'exclude'    => '',
-    'link'       => ''
+    'link'       => 'file'
   ), $attr, 'gallery' );
 
   $id = intval( $atts['id'] );
@@ -183,7 +183,7 @@ function haris_blockgrid_gallery_shortcode( $attr ) {
   foreach ( $attachments as $id => $attachment ) {
 
     $attr = ( trim( $attachment->post_excerpt ) ) ? array( 'aria-describedby' => "$selector-$id" ) : '';
-    if ( ! empty( $atts['link'] ) && 'file' === $atts['link'] ) {
+    if ( TRUE || (! empty( $atts['link'] ) && 'file' === $atts['link']) ) {
       $image_output = wp_get_attachment_link( $id, $atts['size'], false, false, false, $attr );
     } elseif ( ! empty( $atts['link'] ) && 'none' === $atts['link'] ) {
       $image_output = wp_get_attachment_image( $id, $atts['size'], false, $attr );

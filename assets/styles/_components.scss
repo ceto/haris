@@ -240,3 +240,38 @@
         font-weight: $global-weight-bold;
     }
 }
+
+.readmore {
+    display: inline-block;
+    position: relative;
+    color:inherit;
+    //font-weight: $global-weight-bold;
+    //text-transform: uppercase;
+    //opacity: .75;
+
+    font-size: .75em;
+    line-height: 1;
+    &:hover, &:focus {
+        color:#000;
+        &:before {
+            background-color: map-get($foundation-palette, alert);
+        }
+    }
+    &:after {
+        content:"→";
+        display: inline-block;
+        margin-left: .25em;
+        //color: map-get($foundation-palette, alert);
+    }
+    &:before {
+        content: '';
+        display: block;
+        z-index: -1;
+        position: absolute;
+        left:0;
+        bottom:0;
+        width:100%;
+        height:.4em;
+        background-color: transparent;
+    }
+}

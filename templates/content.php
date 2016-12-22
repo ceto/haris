@@ -17,6 +17,7 @@
     <div class="columns tablet-9 xlarge-8 tablet-push-3 xlarge-push-2">
       <div class="hentry__summary">
         <?php the_excerpt(); ?>
+        <a class="readmore" href="<?php the_permalink(); ?>"><?= __('Tovább a részletekre', 'haris') ?></a>
       </div>
     </div>
   </div>

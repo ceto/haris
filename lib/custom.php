@@ -1,5 +1,32 @@
 <?php
 
+  function haris_add_roles_on_activation() {
+     remove_role( 'confidential');
+      add_role( 'confidental', 'Confidental', array(
+          'read' => true,
+          'read_private_pages' => true,
+          'read_private_posts' => true
+      ));
+  }
+  add_action("after_switch_theme", "haris_add_roles_on_activation");
+
+
+
+  function get_user_roles() {
+      $user = get_userdata( get_current_user_id() );
+      return $user->roles;
+  }
+
+  function is_user_in_role( $role ) {
+      return in_array( $role, get_user_roles( ) );
+  }
+
+
+  function haris_change_private_title_prefix() {
+      return __('Confidental','haris').': %s';
+  }
+  add_filter('private_title_format', 'haris_change_private_title_prefix');
+
   // 1. customize ACF path
   add_filter('acf/settings/path', 'haris_acf_settings_path');
   function haris_acf_settings_path( $path ) {
