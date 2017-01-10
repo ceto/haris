@@ -23,7 +23,7 @@
 
 
   function haris_change_private_title_prefix() {
-      return __('Confidental','haris').': %s';
+      return __('Confidential','haris').': %s';
   }
   add_filter('private_title_format', 'haris_change_private_title_prefix');
 

@@ -4,12 +4,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2017-01-10 11:40+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Loco - https://localise.biz/\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -19,3 +19,146 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-3: node_modules\n"
 "X-Poedit-SearchPathExcluded-4: lib/acf\n"
 "X-Poedit-SearchPathExcluded-5: lib/soil\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION"
+
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: base.php:11
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http:"
+"//browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+
+#: functions.php:27
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: index.php:6 search.php:6
+msgid "Sorry, no results were found."
+msgstr ""
+
+#. Name of the template
+msgid "Home Template"
+msgstr ""
+
+#: tmpl-home.php:83
+msgid "Show 3D visualization"
+msgstr ""
+
+#: tmpl-home.php:84
+msgid "Details of reconstruction"
+msgstr ""
+
+#: lib/custom.php:26
+msgid "Confidential"
+msgstr ""
+
+#: lib/extras.php:31
+msgid "Continued"
+msgstr ""
+
+#: lib/setup.php:32
+msgid "Primary Navigation"
+msgstr ""
+
+#: lib/setup.php:89
+msgid "Primary"
+msgstr ""
+
+#: lib/setup.php:98
+msgid "Footer"
+msgstr ""
+
+#: lib/titles.php:13
+msgid "Latest Posts"
+msgstr ""
+
+#: lib/titles.php:18
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: lib/titles.php:20
+msgid "Not Found"
+msgstr ""
+
+#: templates/comments.php:9
+#, php-format
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr ""
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: templates/comments.php:31
+msgid "Comments are closed."
+msgstr ""
+
+#: templates/confidental.php:7 templates/footer.php:10
+msgid "Register"
+msgstr ""
+
+#: templates/content-page.php:2 templates/content-single.php:22
+msgid "Pages:"
+msgstr ""
+
+#: templates/content.php:20 templates/featcontent.php:13
+msgid "Read more"
+msgstr ""
+
+#: templates/entry-meta.php:2
+msgid "By"
+msgstr ""
+
+#: templates/footer.php:19
+msgid ""
+"&copy; 2016 All rights reserved &middot; Haris Park Kft. &middot; Site by <a "
+"href=\"http://hydrogene.hu\" target=\"_blank\">Hydrogene</a>"
+msgstr ""
+
+#: templates/header.php:10
+msgid "Menu"
+msgstr ""
+
+#: templates/header.php:16
+msgid "Login"
+msgstr ""
+
+#: templates/header.php:20
+msgid "Logut"
+msgstr ""
+
+#: templates/page-hero.php:18
+msgid "News"
+msgstr ""
+
+#. Name of the theme
+msgid "Haris Park"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Haris Park is a custom WordPress theme. <a href=\"https://github."
+"com/ceto/haris\">Development package is on GitHub</a>"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "http://hydrogene.hu/"
+msgstr ""
+
+#. Author of the theme
+msgid "Hydrogene"
+msgstr ""

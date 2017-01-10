@@ -8,7 +8,6 @@
   <div class="hero__content">
     <div class="row">
       <div class="columns">
-      <svg class="hero__logo"><use xlink:href="#icon-haris-park"></use></svg>
       <h2 class="hero__maintext"><?php the_field('herotitle'); ?></h2>
       <h3 class="hero__discl"><?php the_field('herosubtitle'); ?></h3>
     </div>
@@ -80,8 +79,8 @@
     <div class="row wow fadeInUp">
       <div class="columns large-6">
         <p>
-          <a href="#" class="button">Mutasd a látványterveket</a>
-          <a href="<?php the_permalink(18); ?>" class="button success">Rekonstrukció részletei</a>
+          <a href="#" class="button"><?= __('Show 3D visualization','haris')  ?></a>
+          <a href="<?php the_permalink(18); ?>" class="button success"><?= __('Details of reconstruction','haris')  ?></a>
         </p>
       </div>
     </div>

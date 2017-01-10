@@ -1,3 +1,15 @@
+.siteinfo {
+  .icon {
+    fill: map-get($foundation-palette, primary);
+    //fill: #fff;
+    width:21rem;
+    height:5.25rem;
+    //background-color: red;
+    margin-bottom: 3rem;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}
 .fsocials {
   list-style-type: none;
   margin:0;

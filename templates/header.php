@@ -1,10 +1,10 @@
 <div data-sticky-container>
-  <header class="top-bar dark" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="180">
+  <header class="top-bar dark" data-sticky data-sticky-on="tablet" data-margin-top="0" data-top-anchor="180">
     <div class="row">
       <div class="columns">
         <div class="top-bar-title">
           <a class="homelogo" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-            <svg class="homelogo__img" alt="<?php bloginfo('name'); ?>"><use xlink:href="#icon-hp"></use></svg>
+            <?php bloginfo('name'); ?>
           </a>
           <span class="csiki" data-responsive-toggle="responsive-menu" data-hide-for="tablet">
             <button class="menu-icon" type="button" data-toggle><!-- <?= __('Menu','haris')  ?> --></button>

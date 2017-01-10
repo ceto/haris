@@ -5,10 +5,11 @@
   height: 32rem;
   overflow:hidden;
   background-size: cover;
-  background-position: center 20%;
+  background-position: center;
 
   background-repeat: no-repeat;
   @include breakpoint(tablet) {
+    background-position: center 20%;
     height: 60vh;
     min-height:35rem;
     max-height:40rem;
@@ -36,7 +37,9 @@
 
 .hero--home {
   background-image: url(../images/homlokzat.jpg);
-  background-position: center 85%;
+  @include breakpoint(tablet) {
+    background-position: center 85%;
+  }
 
 }
 .hero--narrow {
@@ -73,7 +76,7 @@
 .hero__maintext {
   color:inherit;
   text-transform: uppercase;
-  font-weight: $global-weight-bold;
+  font-weight: $global-weight-normal;
   font-size: 1.5rem;
   @include breakpoint(medium) {
     font-size: 2rem;

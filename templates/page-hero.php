@@ -15,7 +15,7 @@
         <?php else: ?>
           <h2 class="hero__maintext">
             <a href="<?= get_permalink( get_option( 'page_for_posts' ) ) ?>">
-              <?= __('Hírek', 'haris');  ?>
+              <?= __('News', 'haris');  ?>
             </a>
           </h2>
         <?php endif; ?>

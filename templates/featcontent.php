@@ -10,7 +10,7 @@
     </header>
     <div class="hentry__summary lead">
       <?php the_excerpt(); ?>
-      <a class="readmore" href="<?php the_permalink(); ?>"><?= __('Tovább a részletekre', 'haris') ?></a>
+      <a class="readmore" href="<?php the_permalink(); ?>"><?= __('Read more', 'haris') ?></a>
     </div>
   </div>
 </article>
