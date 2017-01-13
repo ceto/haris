@@ -4,16 +4,23 @@
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
+
 <section class="hero hero--home">
+  <?php
+    $heroimg = get_field('heroimage');
+    if ( !empty($heroimg) )  : ?>
+    <?= wp_get_attachment_image( $heroimg['ID'], 'small' ); ?>
+  <?php endif; ?>
   <div class="hero__content">
     <div class="row">
       <div class="columns">
-      <h2 class="hero__maintext"><?php the_field('herotitle'); ?></h2>
-      <h3 class="hero__discl"><?php the_field('herosubtitle'); ?></h3>
+        <h2 class="hero__maintext"><?php the_field('herotitle'); ?></h2>
+        <h3 class="hero__discl"><?php the_field('herosubtitle'); ?></h3>
+      </div>
     </div>
   </div>
-</div>
 </section>
+
 <?php get_template_part('templates/promorow'); ?>
 <section class="ps homelead">
 <div class="row">
@@ -86,7 +93,7 @@
     </div>
   </section>
 <?php else: ?>
-  <?php get_template_part('templates/confidental'); ?>
+  <?php //get_template_part('templates/confidental'); ?>
 <?php endif; ?>
 <section class="mapsection">
 <div class="row">

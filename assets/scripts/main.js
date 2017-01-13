@@ -21,7 +21,7 @@ $.each($('.card, .membersquare, .projectsquare, .clientlogo'), function(i, el){
 
 
 $('document').ready(function() {
-
+  objectFitImages('.hero > img');
 
   $('input[type=text], input[type=email]').on('change', function(){
       if ( $(this).val() !== '' ) {

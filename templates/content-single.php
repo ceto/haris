@@ -6,10 +6,7 @@
     </div>
   </div>
   <div class="row ps">
-    <div class="columns tablet-3 xlarge-2">
-      share
-    </div>
-    <div class="columns tablet-9 xlarge-8 end">
+    <div class="columns tablet-9 tablet-push-3 xlarge-8 xlarge-push-2">
       <?php if (has_post_thumbnail() ) :?>
       <figure class="hentry__featimg">
         <?php the_post_thumbnail( $size, $attr ); ?>
