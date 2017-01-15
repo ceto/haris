@@ -39,3 +39,21 @@
 }
 
 
+.sitefooter__socials {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  transform:translateY(-.5rem);
+  li {
+    display: inline-block;
+    a {
+      color: $primary-color;
+      svg {
+        width:1.666rem;
+        height:1.666rem;
+        margin-right:.5rem;
+        fill: currentColor;
+      }
+    }
+  }
+}

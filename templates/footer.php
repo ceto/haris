@@ -4,10 +4,9 @@
             <svg class="icon"><use xlink:href="#icon-hp_haris_park"></use></svg>
         </div>
         <div class="columns xlarge-6">
-
             <?php dynamic_sidebar('sidebar-footer'); ?>
             <?php if (!is_user_logged_in()) : ?>
-            <p><a class="button small" href="<?= wp_registration_url();  ?>">
+            <p><a class="button tiny success" href="<?= wp_registration_url();  ?>">
                 <?= __('Register','haris')  ?>
             </a></p>
             <?php endif; ?>
@@ -16,7 +15,20 @@
 </aside>
 <footer class="sitefooter ps ps--dark ps--narrow">
     <div class="row wow fadeInUp">
-        <div class="columns">
+        <div class="columns large-6 large-push-6">
+            <ul class="sitefooter__socials">
+                <li>
+                    <a href="#"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
+                </li>
+                <li>
+                    <a href="#"><svg class="icon"><use xlink:href="#icon-linkedin"></use></svg></a>
+                </li>
+                <li>
+                    <a href="#"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>
+                </li>
+            </ul>
+        </div>
+        <div class="columns large-6 large-pull-6">
             <?= __('&copy; 2016 All rights reserved &middot; Haris Park Kft. &middot; Site by <a href="http://hydrogene.hu" target="_blank">Hydrogene</a>','haris')  ?>
         </div>
     </div>
