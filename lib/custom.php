@@ -14,7 +14,7 @@
 
   function get_user_roles() {
       $user = get_userdata( get_current_user_id() );
-      return $user->roles;
+      return $user->roles?$user->roles:[];
   }
 
   function is_user_in_role( $role ) {

@@ -18,13 +18,13 @@
         <div class="columns large-6 large-push-6">
             <ul class="sitefooter__socials">
                 <li>
-                    <a href="#"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
+                    <a href="https://www.facebook.com/harisparkbudapest" target="_blank" title="Facebook"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
                 </li>
                 <li>
-                    <a href="#"><svg class="icon"><use xlink:href="#icon-linkedin"></use></svg></a>
+                    <a href="https://www.pinterest.com/harispark_bp/" target="_blank" title="Pinterest"><svg class="icon"><use xlink:href="#icon-pinterest"></use></svg></a>
                 </li>
                 <li>
-                    <a href="#"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>
+                    <a href="https://www.instagram.com/harispark_bp/" target="_blank" title="Instagram"><svg class="icon"><use xlink:href="#icon-instagram"></use></svg></a>
                 </li>
             </ul>
         </div>
