@@ -1,7 +1,7 @@
 .hentry__header {
   .hentry--inarchive:not(.hentry--leader) & {
     @include breakpoint(tablet) {
-      margin-bottom: -1.25rem;
+      //margin-bottom: -1.25rem;
     }
   }
 
@@ -16,9 +16,14 @@
     width: 1.5rem;
     height: .25rem;
     background-color: map-get($foundation-palette, alert);
+    @include breakpoint(tablet) {
+      .hentry--inarchive:not(.hentry--leader) & {
+        position:absolute;
+      }
+    }
   }
-
 }
+
 .hentry__title {
   //text-align: center;
   //color:$body-font-color;
